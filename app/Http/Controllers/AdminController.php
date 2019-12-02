@@ -30,11 +30,15 @@ class AdminController extends Controller
 
     public function dashboard(){
         if(Session::has('adminSession')){
-
+            //
         }else{
             return redirect('/admin')->with('flash_message_error','Please login to access');  
         }
         return view('admin.dashboard');
+    }
+
+    public function settings(){
+        return view('admin.settings');
     }
 
     public function logout(){
