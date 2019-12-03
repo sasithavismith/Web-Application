@@ -85,7 +85,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
-                  <a class="dropdown-item" href="admin.settings">Modify User</a>
+                  <a class="dropdown-item" href="/admin/settings">Modify User</a>
                 </div>
               </li>
           
@@ -167,6 +167,7 @@
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script src="js/matrix.form_validation.js"></script> 
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
