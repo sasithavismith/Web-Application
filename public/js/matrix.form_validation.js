@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-	$("#current_pwd").keyup(function(){
+	$("#current_pwd").click(function(){
 		var current_pwd = $("#current_pwd").val();
 		$.ajax({
 			type:'get',
@@ -10,9 +10,9 @@ $(document).ready(function(){
 			success:function(resp){
 				//alert(resp);
 				if(resp=="false"){
-					$("#chkpwd").html("<font color='red'>Current Password is Incorrect</font>");
+					$("#check_pwd").html("<font color='red'>Current Password is Incorrect</font>");
 				}else{
-					$("#chkpwd").html("<font color='green'>Current Password is Correct</font>");
+					$("#check_pwd").html("<font color='green'>Current Password is Correct</font>");
 				}
 			},error:function(){
 				alert("Error");
@@ -76,7 +76,8 @@ $(document).ready(function(){
 		},
 		unhighlight: function(element, errorClass, validClass) {
 			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');
+			$(element).parents('.control-group').addClass('success');  
+
 		}
 	});
 	

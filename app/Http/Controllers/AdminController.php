@@ -44,9 +44,9 @@ class AdminController extends Controller
 
     public function chkpwd(Request $request){
         $data = $request->all();
-        $current_password=$data['current_pwd'];
-        $check_password=User::where(['admin'=>'1'])->first();
-        if(Hash::check($current_password,$check_password->password)){
+        $current_pwd=$data['current_pwd'];
+        $check_pwd=User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->first();
+        if(Hash::check($current_pwd,$check_pwd->password)){
             echo "true";
             die;
         }else{
@@ -61,11 +61,11 @@ class AdminController extends Controller
             echo "<pre>";
             //print_r($data);
             //die;
-            $check_password=User::where(['email'=>Auth::user()->email])->first();
-            $current_password=$data['current_pwd'];
-            if(Hash::check($current_password,$check_password->password)){
+            $check_pwd=User::where(['name'=>Auth::user()->name])->first();
+            $current_pwd=$data['current_pwd'];
+            if(Hash::check($current_pwd,$check_pwd->password)){
                 $password=bcrypt($data['new_pwd']);
-                User::where('id','1')->update(['password'=>$password]);
+                User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->update(['password'=>$password]);
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
                 }else{
                 return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
