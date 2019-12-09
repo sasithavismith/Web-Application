@@ -141,7 +141,7 @@
                   </div>
                 </div>
                 <div class="form-actions">
-                  <input type="submit" value="Update Password" class="btn btn-success">
+                  <input type="submit" value="Update Password" class="btn btn-primary">
                 </div>
               </form>
           </div>
