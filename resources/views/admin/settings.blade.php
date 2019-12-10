@@ -19,13 +19,6 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-<link rel="stylesheet" href="../css/bootstrap-responsive.min.css" />
-<link rel="stylesheet" href="../css/uniform.css" />
-<link rel="stylesheet" href="../css/select2.css" />
-<link rel="stylesheet" href="../css/matrix-style.css" />
-<link rel="stylesheet" href="../css/matrix-media.css" />
-
 
 </head>
 
@@ -112,38 +105,55 @@
     <div class="col-md-6">
       <div class="card mb-5 mt-5">
         <div class="card-header">
-          <h4 class="card-title text-center"><b>Login Here</b></h4>
+          <h4 class="card-title text-center"><b>Update Password</b></h4>
         </div>
         <div class="card-body">
           <div class="row justify-content-center">
             <div class="col-md-12"> 
 
-  @extends('layouts.adminlayouts.admin_design')
 
-@section('content')
+
+            @if(Session::has('flash_error_message')) 
+            <div class="alert alert-success alert-block">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+    
+    <strong>{!! Session('flash_error_message') !!}  </strong>
+    </div>
+    @endif      
+
+    @if(Session::has('flash_message_success')) 
+    <div class="alert alert-success alert-block">
+      <button type="button" class="close" data-dismiss="alert">x</button>
+    
+    <strong>{!! Session('flash_message_success') !!}  </strong>
+    </div>
+    @endif 
+
+
 
             <form class="form-horizontal" method="post" action="{{ url('/admin/update-pwd') }}" name="password_validate" id="password_validate" novalidate="novalidate">
                 {{csrf_field()}}
-                <div class="control-group">
-                  <label class="control-label">Current Password</label>
-                  <div class="controls">
-                    <input type="password" name="current_pwd" id="current_pwd" />
+                <div class="form-group">
+                  <label class="control-label" class="col-md-4 control-label">Current Password</label>
+                  <div class="col-md-6">
+                    <input type="password" name="current_pwd" id="current_pwd" class="form-control" />
                     <span id="chkpwd"></span>
                   </div>
                 </div>
-                <div class="control-group">
-                  <label class="control-label">New Password</label>
-                  <div class="controls">
-                    <input type="password" name="new_pwd" id="new_pwd" />
+                <div class="form-group">
+                  <label class="control-label" class="col-md-4 control-label">New Password</label>
+                  <div class="col-md-6">
+                    <input type="password" name="new_pwd" id="new_pwd" class="form-control"/>
                   </div>
                 </div>
-                <div class="control-group">
-                  <label class="control-label">Confirm password</label>
-                  <div class="controls">
-                    <input type="password" name="confirm_pwd" id="confirm_pwd" />
+                <div class="form-group">
+                  <label class="control-label" class="col-md-4 control-label">Confirm password</label>
+                  <div class="col-md-6">
+                    <input type="password" name="confirm_pwd" id="confirm_pwd" class="form-control" />
                   </div>
                 </div>
-                <div class="form-actions">
+                <div class="form-group">
+                  <div class="col-md-8 col-md-offset-4">
                   <input type="submit" value="Update Password" class="btn btn-primary">
                 </div>
               </form>
@@ -158,19 +168,12 @@
   
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
-
-   
- 
-
-   
     <script src="../js/jquery.min.js"></script> 
-<script src="../js/jquery.ui.custom.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/jquery.uniform.js"></script> 
-<script src="../js/select2.min.js"></script> 
-<script src="../js/jquery.validate.js"></script> 
-<script src="../js/matrix.js"></script> 
-<script src="../js/matrix.form_validation.js"></script>
+    <script src="../js/bootstrap.min.js"></script> 
+    <script src="../js/jquery.uniform.js"></script> 
+    <script src="../js/select2.min.js"></script> 
+    <script src="../js/jquery.validate.js"></script> 
+    <script src="../js/matrix.form_validation.js"></script>
  
 </body>
 
