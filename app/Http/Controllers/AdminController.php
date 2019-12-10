@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use auth;
 use Session;
 use App\User;
@@ -76,4 +79,7 @@ class AdminController extends Controller
         Session::flush();
         return redirect('/admin')->with('flash_message_success','Logged out Successed');
     }
+    
+    
 }
+

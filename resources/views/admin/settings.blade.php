@@ -112,6 +112,7 @@
             <div class="col-md-12"> 
 
 
+
             @if(Session::has('flash_error_message')) 
             <div class="alert alert-success alert-block">
               <button type="button" class="close" data-dismiss="alert">x</button>
@@ -127,6 +128,8 @@
     <strong>{!! Session('flash_message_success') !!}  </strong>
     </div>
     @endif 
+
+
 
             <form class="form-horizontal" method="post" action="{{ url('/admin/update-pwd') }}" name="password_validate" id="password_validate" novalidate="novalidate">
                 {{csrf_field()}}
