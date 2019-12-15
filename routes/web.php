@@ -11,6 +11,9 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,6 +21,9 @@ Route::get('/', function () {
 Route::get('/form1','AdminController@store');
 
 Route::get('/manuscript','AdminController@store1');
+Route::get('/higher','AdminController@store2');
+Route::get('/formB','AdminController@store3');
+Route::get('/formA','AdminController@store4');
 
 Route::get('/index','AdminController@show');
 
@@ -29,7 +35,8 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/admin/dashboard','AdminController@dashboard');
     Route::get('/admin/settings','AdminController@settings');
     Route::get('/admin/check-pwd','AdminController@chkpwd');
-    Route::match(['get','post'],'/admin/update-pwd','AdminController@updatepwd');
+    Route::match(['get','post'],'/admin/update-pwd','AdminController@updatePassword');
+    
 });
  
 Auth::routes();
@@ -39,3 +46,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+

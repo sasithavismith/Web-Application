@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use auth;
-use Session;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,6 +17,15 @@ class AdminController extends Controller
 
 public function store1(){
     return view('layouts/form/manuscript');
+}
+public function store2(){
+    return view('layouts/form/higher');
+}
+public function store3(){
+    return view('layouts/form/formB');
+}
+public function store4(){
+    return view('layouts/form/formA');
 }
 
     public function show(){
@@ -63,18 +74,20 @@ public function store1(){
         }
     }
 
-    public function updatepwd(Request $request){
+    public function updatePassword(Request $request){
         if($request->isMethod('post')){
             $data=$request->all();
-            echo "<pre>";
+            //echo "<pre>";
             //print_r($data);
             //die;
             $check_pwd=User::where(['name'=>Auth::user()->name])->first();
             $current_pwd=$data['current_pwd'];
             if(Hash::check($current_pwd,$check_pwd->password)){
                 $password=bcrypt($data['new_pwd']);
+
                 User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->update(['password'=>$password]);
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
+
                 }else{
                 return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
             }
@@ -84,4 +97,7 @@ public function store1(){
         Session::flush();
         return redirect('/admin')->with('flash_message_success','Logged out Successed');
     }
+    
+    
 }
+
