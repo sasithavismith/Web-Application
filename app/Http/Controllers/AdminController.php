@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-// use auth;
+ //use auth;
 // use Session;
 use App\User;
 use Illuminate\Support\Facades\Hash;
@@ -68,13 +68,10 @@ class AdminController extends Controller
             $current_pwd=$data['current_pwd'];
             if(Hash::check($current_pwd,$check_pwd->password)){
                 $password=bcrypt($data['new_pwd']);
-<<<<<<< HEAD
-                User::where('id','1')->update(['password'=>$password]);
-                return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
-=======
+
                 User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->update(['password'=>$password]);
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
->>>>>>> f2c920a1add637e1c76aa698512c8fb1915770fa
+
                 }else{
                 return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
             }
