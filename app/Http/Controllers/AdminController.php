@@ -5,8 +5,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
- //use auth;
-// use Session;
+
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
