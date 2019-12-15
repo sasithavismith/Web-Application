@@ -26,19 +26,20 @@
       <div class="content mb-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-md-8">
-          @if(Session::has('flash_message_error'))
-    <div class="alert alert-success alert-block">
-      <button type="button" class="close" data-dismiss="alert">x</button>
-      <strong>{!! session('flash_message_error') !!}</strong>
-    </div>
-    @endif
-    @if(Session::has('flash_message_success'))
-    <div class="alert alert-primary alert-block">
-      <button type="button" class="close" data-dismiss="alert">x</button>
-      <strong>{!! session('flash_message_success') !!}</strong>
-    </div>
-    @endif
+            @if(Session::has('flash_message_error'))
+            <div class="alert alert-success alert-block">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>{!! Session('flash_message_error') !!}</strong>
+            </div>
+            @endif
+            @if(Session::has('flash_message_success'))
+            <div class="alert alert-primary alert-block">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>{!! session('flash_message_success') !!}</strong>
+            </div>
+            @endif
             <div class="card">
+              <div class="card-title"><img src="assets/img/images (2).jpg" alt="img" style="width: 750px; height: 200px;"></div>
               <div class="card-header">
                 <h4 class="card-title text-center"><b>Login Here</b></h4>
               </div>
@@ -53,13 +54,13 @@
                         <div class="form-group">
 				                  <label for="name" class="col-md-4 control-label">Username</label>
                             <div class="col-md-6">
-                              <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                              <input id="name" type="text" class="form-control" name="name">
                             </div>
                         </div>
                         <div class="form-group">
                           <label for="password" class="col-md-4 control-label">Password</label>
                             <div class="col-md-6">
-                              <input id="password" type="password" class="form-control" name="password" required>
+                              <input id="password" type="password" class="form-control" name="password">
                             </div>
                         </div>
                         <div class="form-group">
@@ -96,12 +97,17 @@
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+
+  <script src="../js/jquery.validate.js"></script> 
+    <script src="../js/matrix.form_validation.js"></script>
+
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       demo.initDashboardPageCharts();
 
     });
+    
   </script>
     </body>
 
