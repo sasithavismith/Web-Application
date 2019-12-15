@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/form1','AdminController@store');
 
 Route::get('/manuscript','AdminController@store1');
+Route::get('/higher','AdminController@store2');
+Route::get('/formB','AdminController@store3');
+Route::get('/formA','AdminController@store4');
 
 Route::get('/index','AdminController@show');
 

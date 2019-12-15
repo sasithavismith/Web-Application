@@ -18,6 +18,15 @@ class AdminController extends Controller
 public function store1(){
     return view('layouts/form/manuscript');
 }
+public function store2(){
+    return view('layouts/form/higher');
+}
+public function store3(){
+    return view('layouts/form/formB');
+}
+public function store4(){
+    return view('layouts/form/formA');
+}
 
     public function show(){
         return view('index');
