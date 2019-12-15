@@ -5,8 +5,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use auth;
-use Session;
+// use auth;
+// use Session;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -58,10 +58,10 @@ class AdminController extends Controller
         }
     }
 
-    public function updatepwd(Request $request){
+    public function updatePassword(Request $request){
         if($request->isMethod('post')){
             $data=$request->all();
-            echo "<pre>";
+            //echo "<pre>";
             //print_r($data);
             //die;
             $check_password=User::where(['email'=>Auth::user()->email])->first();
@@ -69,7 +69,7 @@ class AdminController extends Controller
             if(Hash::check($current_password,$check_password->password)){
                 $password=bcrypt($data['new_pwd']);
                 User::where('id','1')->update(['password'=>$password]);
-                return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
+                return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
                 }else{
                 return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
             }
