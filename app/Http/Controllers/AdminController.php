@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
+        public function store(){
+            return view('layouts/form/form1');
+        }
+
+public function store1(){
+    return view('layouts/form/manuscript');
+}
+
     public function show(){
         return view('index');
     }
@@ -33,7 +41,7 @@ class AdminController extends Controller
         if(Session::has('adminSession')){
             //
         }else{
-            return redirect('/admin')->with('flash_message_error','Please login to access');  
+            return redirect('/admin')->with('flash_message_error',"Please login to access");  
         }
         return view('admin.dashboard');
     }

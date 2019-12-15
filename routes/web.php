@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/form1','AdminController@store');
+
+Route::get('/manuscript','AdminController@store1');
+
 Route::get('/index','AdminController@show');
 
 Route::match(['get','post'],'/admin','AdminController@login');
