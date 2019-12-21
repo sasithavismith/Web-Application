@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-	$("#current_pwd").click(function(){
+	$("#new_pwd").click(function(){
 		var current_pwd = $("#current_pwd").val();
 		$.ajax({
 			type:'get',
@@ -11,7 +11,7 @@ $(document).ready(function(){
 				//alert(resp);
 				if(resp=="false"){
 					$("#check_pwd").html("<font color='red'>Current Password is Incorrect</font>");
-				}else{
+				}else if(resp=="true"){
 					$("#check_pwd").html("<font color='green'>Current Password is Correct</font>");
 				}
 			},error:function(){
@@ -46,11 +46,11 @@ $(document).ready(function(){
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.control-group').addClass('error');
+			$(element).parents('.form-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');
+			$(element).parents('.form-group').removeClass('error');
+			$(element).parents('.form-group').addClass('success');
 		}
 	});
 	
@@ -72,12 +72,11 @@ $(document).ready(function(){
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.control-group').addClass('error');
+			$(element).parents('.form-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');  
-
+			$(element).parents('.form-group').removeClass('error');
+			$(element).parents('.form-group').addClass('success');
 		}
 	});
 	
@@ -99,17 +98,15 @@ $(document).ready(function(){
 				maxlength:20,
 				equalTo:"#new_pwd"
 			}
-
-
 		},
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.control-group').addClass('error');
+			$(element).parents('.form-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');
+			$(element).parents('.form-group').removeClass('error');
+			$(element).parents('.form-group').addClass('success');
 		}
 	});
 });

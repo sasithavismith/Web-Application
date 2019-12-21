@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-
+use Auth;
+use Session;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -73,9 +71,9 @@ public function store4(){
             die;
         }
     }
-
+    
     public function updatePassword(Request $request){
-        if($request->isMethod('post')){
+            if($request->isMethod('post')){
             $data=$request->all();
             //echo "<pre>";
             //print_r($data);
@@ -88,11 +86,13 @@ public function store4(){
                 User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->update(['password'=>$password]);
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
 
-                }else{
-                return redirect('/admin/settings')->with('flash_error_message','Incorrect Current Password');
-            }
+            }else{
+                return redirect('/admin/settings')->with('flash_message_error','Password updated Unsuccessfully!');
+
         }
-    } 
+    }
+} 
+
     public function logout(){
         Session::flush();
         return redirect('/admin')->with('flash_message_success','Logged out Successed');

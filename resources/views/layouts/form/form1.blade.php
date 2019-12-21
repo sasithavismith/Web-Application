@@ -1,38 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    
-<head>
-  <meta charset="utf-8"/>
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
-  <title>
-  Web Application
-  </title>
-  
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <!-- CSS Files -->
-  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../assets/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body class="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<body>
-    <div class="container text-center mt-5">
+    <title></title>
+  </head>
+  <body>
+  <div class="jumbotron">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
         <h4>SABARAGAMUWA UNIVERSITY OF SRI LANKA</h4>
 		<br>
 		<h4>APPLICATION FOR A RESEARCH GRANT</h4>
-        <p>(Please refer to the Guidelines for a Applicants - Grants for a Scientific Research)</p>
-    </div>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
+        
+        <hr class="my-4">
+        <p></p>
+        <hr class="my-4">
+        <div class="card" style="width: 60rem;">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">
+                
                 @foreach($errors->all() as $error)
            <div class="alert alert-danger" role="alert">
                {{$error}}
@@ -458,6 +451,10 @@
                         <a href="/form A" type="submit" class="btn btn-primary">Submit</a>
                     </div>
                 </div>
+            </div>
+            </div>
+            </div>
+            
             </div>
  
 </body>

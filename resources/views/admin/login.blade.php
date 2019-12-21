@@ -99,13 +99,12 @@
   <script src="../assets/demo/demo.js"></script>
 
   <script src="../js/jquery.validate.js"></script> 
-    <script src="../js/matrix.form_validation.js"></script>
+  <script src="../js/matrix.form_validation.js"></script>
 
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       demo.initDashboardPageCharts();
-
     });
     
   </script>
