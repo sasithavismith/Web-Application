@@ -17,6 +17,7 @@
             <div class="col-md-8">
                 <h3>Application For Requesting Manuscript Publication Fee Sabaragamuwa University of Sri Lanka</h3>
                 <hr class="my-4">
+                <p></p>
                 <hr class="my-4">
                 <div class="card" style="width: 60rem;">
                   <div class="card-body">

@@ -41,6 +41,19 @@
     <script src="js/jquery.validate.js"></script> 
     <script src="js/matrix.js"></script> 
     <script src="../assets/js/matrix.form_validation.js">
+
+
+
+<script src="{{asset('js/jquery.min.js')}}"></script> 
+<script src="{{asset('js/jquery.ui.custom.js')}}"></script> 
+<script src="{{asset('js/bootstrap.min.js')}}"></script> 
+<script src="{{asset('js/jquery.uniform.js')}}"></script> 
+<script src="{{asset('js/select2.min.js')}}"></script> 
+<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/jquery.validate.js')}}"></script> 
+<script src="{{asset('js/matrix.js')}}"></script>
+<script src="{{asset('js/matrix.form_validation.js')}}"></script>
+<script src="{{asset('js/matrix.tables.js')}}"></script> 
  
    
    

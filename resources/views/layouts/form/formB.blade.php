@@ -1,25 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Application for a Research Grant</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-</head>
-<body>
-        <div class="container text-center mt-5">
+    <title></title>
+  </head>
+  <body>
+    
+    <div class="jumbotron">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <h4>Form B</h4>
                 <br>
                 <h4>Declartion form for confirming attendance at the Overseas Conference\Symposium\Workshop</h4>
-                 </div> 
-                 <div class="container mt-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <div class="Presonal Details of Applicant"> 
-
-                      
-
-                <form action="/savedetail" method="post">
+                <hr class="my-4">
+                <p></p>
+                <hr class="my-4">
+                <div class="card" style="width: 60rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                        <form>
                         
                 <div class="form-group">
                 <label>1. Full Name:</label>
@@ -90,7 +96,7 @@
                         <label>Date</label>
                         <input type="date" name="date" class="form-control" required>
                 </form>
-                
+           
         </div>
     </div>
   </div>
