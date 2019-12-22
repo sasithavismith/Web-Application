@@ -62,7 +62,7 @@ public function store4(){
     public function chkpwd(Request $request){
         $data = $request->all();
         $current_pwd=$data['current_pwd'];
-        $check_pwd=User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->first();
+        $check_pwd=User::where(['name'=>Auth::user()->name])->first();
         if(Hash::check($current_pwd,$check_pwd->password)){
             echo "true";
             die;
@@ -83,11 +83,11 @@ public function store4(){
             if(Hash::check($current_pwd,$check_pwd->password)){
                 $password=bcrypt($data['new_pwd']);
 
-                User::where(['Vice Chancellor'=>'1','Grant Admin'=>'2','Dean'=>'3','Department Head'=> '4'])->update(['password'=>$password]);
+                User::where(['name'=>Auth::user()->name])->update(['password'=>$password]);
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
 
             }else{
-                return redirect('/admin/settings')->with('flash_message_error','Password updated Unsuccessfully!');
+                return redirect('/admin/settings')->with('flash_message_error','Password updated Uns uccessfully!');
 
         }
     }

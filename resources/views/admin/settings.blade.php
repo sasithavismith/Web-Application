@@ -149,7 +149,7 @@
                   </div>
                 </div>
                 <div class="form-actions">
-                  <input type="submit" value="Change" class="btn btn-success">
+                  <input type="submit" value="Update" class="btn btn-success">
                 </div>
               </form>
             </div>
