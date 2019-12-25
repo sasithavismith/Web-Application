@@ -25,8 +25,8 @@
                   <div class="card-body">
                     <h5 class="card-title"></h5>
                     <p class="card-text">
-                        <form>
-                        
+                        <form action="/saveformB" method="post">
+                        {{csrf_field()}}
                 <div class="form-group">
                 <label>1. Full Name:</label>
                 <input type="text" name="full_name" class="form-control" required>

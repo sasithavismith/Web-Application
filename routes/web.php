@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +35,12 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/admin/settings','AdminController@settings');
     Route::get('/admin/check-pwd','AdminController@chkpwd');
     Route::match(['get','post'],'/admin/update-pwd','AdminController@updatePassword');
+    Route::post('/saveformB','formBController@store');
+     Route::get('/admin/formBview', function () {
+         Route::post('/saveformB','formBController@store');
+          $data=App\formB::all();
+          return view('admin.formBview')->with('details',$data);
+     });
     
 });
  

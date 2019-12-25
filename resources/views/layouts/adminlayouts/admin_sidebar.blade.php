@@ -44,7 +44,7 @@
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="#">Application 3</a>
+                 <a class="dropdown-item" href="{{url('/admin/formBview')}}">Application 3</a>
                  <a class="dropdown-item" href="#">Application 4</a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>
