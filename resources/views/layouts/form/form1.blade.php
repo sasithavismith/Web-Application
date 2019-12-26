@@ -1,47 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application for a Research Grant</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title></title>
-  </head>
-  <body>
-  <div class="jumbotron">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+</head>
+<body>
+    <div class="container text-center mt-5">
         <h4>SABARAGAMUWA UNIVERSITY OF SRI LANKA</h4>
 		<br>
 		<h4>APPLICATION FOR A RESEARCH GRANT</h4>
-        
-        <hr class="my-4">
-        <p></p>
-        <hr class="my-4">
-        <div class="card" style="width: 60rem;">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text">
-                
-                @foreach($errors->all() as $error)
-           <div class="alert alert-danger" role="alert">
-               {{$error}}
-           </div> 
-           @endforeach
+        <p>(Please refer to the Guidelines for a Applicants - Grants for a Scientific Research)</p>
+    </div>
+        <div class="container mt-5">
+           
+            
+           
 
                     <form>
-                    {{ csrf_field() }}
+                
                         <div class="form-group">
                             <label for="exampleFormControlInput1">1.Project Title</label>
-                            <input type="text" class="form-control" name="project" id="project" value="{{ old('project') }}" required>
-                            @if ($errors->has('project'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('project') }}</strong>
-                                    </span>
-                                @endif
+                            <input type="text" class="form-control" name="project" id="project" value="" required>
+                           
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">2.Research areas</label>
@@ -432,12 +414,27 @@
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label><strong>11.Budget Justification</strong><br>
-                                                         (1) Personnel<br>
+                                                        <label><strong>11.Budget Justification</strong><br><br>
+                                                        <label><strong>(1) Personnel</strong></label> <br><br>
                                                             
                                                             <label><strong>(i) Research Student</strong></label><br>
-                                                            a. Full time/part time for <input type="text" > Years/months. 
+                                                            a. Full time/part time for <input type="text" > Years/months.<br>
+                                                            Description of work to be carried out by the Research student:-<br><br>
+                                                            <input type="text-area"><br><br>
+                                                            b. Research student will be registering for a postgraduate degree.<br><br>
+                                                            <input type="text"><br><br>
+                                                             
+                                                            <label><strong>(ii) Technical Assistant</strong></label><br>
+                                                            
+                                                            a. Full time/part time for <input type="text" > Years/months.<br>
+                                                            Description of work to be carried out by the Research Assistantent:-<br><br>
+                                                            <label><strong>(iii) Labourers</strong></label><br>
+                                                            
+                                                            a. Full time/part time for <input type="text" > Years/months.<br>
+                                                            Description of work to be performed<br><br>
+                                                            <label><strong>(2) Laboratory Equipment</strong></label> <br><br>
                                                         </label>
+                                                        
 
                                                     </div>
                                                    
@@ -452,36 +449,10 @@
                     </div>
                 </div>
             </div>
-            </div>
-            </div>
-            
-            </div>
  
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
-        
-          <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
-  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      demo.initDashboardPageCharts();
-
-    });
-    
-  </script>
-    </body>
-
 </html>

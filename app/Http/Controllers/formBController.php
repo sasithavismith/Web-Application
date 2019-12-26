@@ -38,7 +38,7 @@ class formBController extends Controller
  
         $formBdetails->save();
           $data=formB::all();
-            return redirect('/formB')->with('details',$data);
+            return redirect('/index')->with('details',$data);
            $data=formB::all();
     }
 
