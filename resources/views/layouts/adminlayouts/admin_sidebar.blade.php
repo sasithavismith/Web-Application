@@ -45,7 +45,7 @@
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
                  <a class="dropdown-item" href="{{url('/admin/formBview')}}">Application 3</a>
-                 <a class="dropdown-item" href="#">Application 4</a>
+                 <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Application 4</a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>
              </li>
