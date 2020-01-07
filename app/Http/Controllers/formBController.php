@@ -24,7 +24,7 @@ class formBController extends Controller
         'date'=>'required',
         'remember'=>'required',
         ]);
-        // dd($request->all());
+         dd($request->all());
         $formBdetails->full_name=$request->full_name;
         $formBdetails->designation=$request->designation;
         $formBdetails ->department=$request->department;
