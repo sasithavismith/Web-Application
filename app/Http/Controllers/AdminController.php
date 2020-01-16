@@ -43,7 +43,7 @@ public function store4(){
             }
 
         }
-        return view('admin.login');
+        return view('admin.adminlogin');
     }
 
     public function dashboard(){
