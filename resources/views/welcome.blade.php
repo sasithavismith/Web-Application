@@ -11,6 +11,7 @@
     <title></title>
   </head>
   <body>
+  <div class="container-fluid">
     <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->
@@ -24,7 +25,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="assets/img/1.jpg"
+        <img class="d-block w-100" src="assets/img/3.jpg"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -50,13 +51,13 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="assets/img/3.jpg"
+        <img class="d-block w-100" src="assets/img/1.jpg"
           alt="Third slide">
         <div class="mask rgba-black-slight"></div>
       </div>
       <div class="carousel-caption">
       <h3 class="h3-responsive">SABARAGAMUWA UNIVERSITY OF SRI LANKA</h3>
-        <h4>Getting Finance or Allowance</h4>
+        <h4>Getting Finance Or Allowance</h4>
         <a class="btn btn-warning" href="/index">Go Here</a><br><br><br>
       </div>
     </div>
@@ -74,6 +75,7 @@
   <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
+</div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
