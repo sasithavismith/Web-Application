@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+
 Route::get('/form1','AdminController@store');
 
 Route::get('/manuscript','AdminController@store1');
