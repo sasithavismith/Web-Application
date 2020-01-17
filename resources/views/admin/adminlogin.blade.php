@@ -21,7 +21,7 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 
-  <body class="">
+  <body class=""z>
   <div class="container">
       <div class="content mb-5 mt-5">
         <div class="row justify-content-center">
@@ -38,10 +38,10 @@
               <strong>{!! session('flash_message_success') !!}</strong>
             </div>
             @endif
-            <div class="card">
-              <div class="card-title"><img src="assets/img/images (2).jpg" alt="img" style="width: 750px; height: 200px;"></div>
+            <div class="card" style="background-color: black;">
+              <div class="card-title"><img src="assets/img/7.jpg" alt="img" style="width: 750px; height: 200px;"></div>
               <div class="card-header">
-                <h4 class="card-title text-center"><b>Login Here</b></h4>
+                <h4 class="card-title text-center text-light"><b>Login Here</b></h4>
               </div>
               <div class="card-body">
                 <div class="row justify-content-center">
@@ -52,13 +52,13 @@
                     <form class="form-horizontal" method="post" action="{{ url('/admin') }}">
                         {{csrf_field()}}
                         <div class="form-group">
-				                  <label for="name" class="col-md-4 control-label">Username</label>
+				                  <label for="name" class="col-md-4 control-label text-light">Username</label>
                             <div class="col-md-6">
                               <input id="name" type="text" class="form-control" name="name">
                             </div>
                         </div>
                         <div class="form-group">
-                          <label for="password" class="col-md-4 control-label">Password</label>
+                          <label for="password" class="col-md-4 control-label text-light">Password</label>
                             <div class="col-md-6">
                               <input id="password" type="password" class="form-control" name="password">
                             </div>

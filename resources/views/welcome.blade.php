@@ -38,7 +38,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="assets/img/2.jpg"
+        <img class="d-block w-100" src="assets/img/4.jpg"
           alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>
@@ -58,7 +58,7 @@
       <div class="carousel-caption">
       <h3 class="h3-responsive">SABARAGAMUWA UNIVERSITY OF SRI LANKA</h3>
         <h4>Getting Finance Or Allowance</h4>
-        <a class="btn btn-warning" href="/index">Go Here</a><br><br><br>
+        <a class="btn btn-warning" href="/index">Get Started</a><br><br><br>
       </div>
     </div>
   </div>
@@ -75,6 +75,13 @@
   <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
+</div>
+
+<div class="container mt-5 mb-5">
+  <div class="jumbotron">
+    <p>This is a Online Applications to get a financial support for the research to researchers(Lectures).The researcher can apply the this online applications.
+       </p>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
