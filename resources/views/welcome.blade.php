@@ -56,7 +56,7 @@
         <div class="mask rgba-black-slight"></div>
       </div>
       <div class="carousel-caption">
-      <h3 class="h3-responsive">SABARAGAMUWA UNIVERSITY OF SRI LANKA</h3>
+      <h3 class="h3-responsive">SABARAGAMUWA UNIVERSITY OF SRI LANKA,BELIHULOYA</h3>
         <h4>Getting Finance Or Allowance</h4>
         <a class="btn btn-warning" href="/index">Get Started</a><br><br><br>
       </div>
