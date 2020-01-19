@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="blue">
+<div class="sidebar" data-color="black">
      
      <div class="logo">
        <a href="http://www.creative-tim.com" class="simple-text logo-mini">

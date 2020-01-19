@@ -19,7 +19,7 @@
                 <hr class="my-4">
                 <p></p>
                 <hr class="my-4">
-                <div class="card" style="width: 60rem;">
+                <div class="card text-light" style="width: 60rem;background-color: hsl(0, 100%, 25%);">
                   <div class="card-body">
                     <h5 class="card-title"></h5>
                     <p class="card-text">
