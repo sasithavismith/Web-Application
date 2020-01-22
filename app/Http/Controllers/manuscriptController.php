@@ -78,7 +78,7 @@ class manuscriptController extends Controller
         public function save(Request $request)
     {
  
-        $request->validate([
+        Validator::make($request->all(), [
         'name' => 'required|string',
         'designation' => 'required|email',
         'department' => 'required',
@@ -98,10 +98,10 @@ class manuscriptController extends Controller
         'file_letter'=> 'required',
         'file_invoice'=> 'required',
         'date1'=> 'required',
-        ]);
+       
+        ])->validate();
  
- 
-        return Redirect::to("manuscript")->withSuccess('Great! Form successfully submit with validation.');
+        
  
     }
 }

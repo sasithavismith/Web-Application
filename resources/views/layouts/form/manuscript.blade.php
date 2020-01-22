@@ -19,13 +19,15 @@
                   <div class="card-body">
                     <h5 class="card-title"></h5>
                     <p class="card-text">
-                    @if ($message = Session::get('fsuccess'))
-    <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-          <strong>{{ $message }}</strong>
-    </div>
-    <br>
-    @endif
+                      @if ($errors->any())
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                  @endif
                         <form action="{{url('manuscript')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">

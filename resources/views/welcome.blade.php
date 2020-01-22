@@ -79,7 +79,7 @@
 
 <div class="container mt-5 mb-5">
   <div class="jumbotron">
-    <p>This is a Online Applications to get a financial support for the research to researchers(Lectures).The researcher can apply the this online applications.
+    <p>This is a Online Applications to get a financial support for the research to researchers(Lectures).The researcher can apply the this online applications.There are four kind of applications.
        </p>
   </div>
 </div>
