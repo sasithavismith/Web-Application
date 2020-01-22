@@ -73,7 +73,7 @@ class manuscriptController extends Controller
             $manuscriptdetails->save();
               $data=manuscript::all();
                 return redirect('/index')->with('details',$data);
-               $data=manuscript::all();
+               
         }
         public function save(Request $request)
     {
