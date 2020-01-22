@@ -29,6 +29,8 @@ Route::get('/formA','AdminController@store4');
 
 Route::get('/index','AdminController@show');
 
+ Route::post('/manuscript', 'manuscriptController@save');
+
 Route::match(['get','post'],'/admin','AdminController@login');
 
 Route::get('/logout','AdminController@logout');

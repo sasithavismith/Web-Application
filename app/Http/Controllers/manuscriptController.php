@@ -1,30 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\manuscript;
 use Illuminate\Support\Facades\Validator;
+
 
 class manuscriptController extends Controller
 {
     public function store1(Request $request){
         $manuscriptdetails=new manuscript;
-    //     $validator = Validator::make($request->all(),[
-    //        'full_name'=>'required|max:100|min:5',
-    //    'designation'=>'required',
-    //        'department'=>'required',
-    //         'faculty'=>'required',
-    //         'tel'=>'required',
-    //         'email' => 'require|email|unique:users',
-    //         'event'=>'required',
-    //         'country'=>'required',
-    //         'period'=>'required',
-    //         'title'=>'required',
-    //         'date'=>'required',
-    //         'remember'=>'required',
-    //         ]);
-            // dd($request->all());
+
             $manuscriptdetails->name=$request->name;
             $manuscriptdetails->designation=$request->designation;
             $manuscriptdetails ->department=$request->department;
@@ -89,4 +75,35 @@ class manuscriptController extends Controller
                 return redirect('/index')->with('details',$data);
                $data=manuscript::all();
         }
+        public function save(Request $request)
+    {
+ 
+        $request->validate([
+        'name' => 'required|string|unique:us',
+        'designation' => 'required|email|unique:us',
+        'department' => 'required|unique:us',
+        'faculty'=> 'required|unique:us',
+        'title'=> 'required|unique:us',
+        'first_author'=> 'required|unique:us',
+        'corresponding_author'=> 'required|unique:us',
+        'other_author'=> 'required|unique:us',
+        'journal'=> 'required|unique:us',
+        'volume_and_issue_number'=> 'required|unique:us',
+        'date_of_acceptance'=> 'required|unique:us',
+        'issn'=> 'required|unique:us',
+        'publisher'=> 'required|unique:us',
+        'publication_fee'=> 'required|unique:us',
+        'file_copy'=> 'required|unique:us',
+        'file_evidence'=> 'required|unique:us',
+        'file_letter'=> 'required|unique:us',
+        'file_invoice'=> 'required|unique:us',
+        'date1'=> 'required|unique:us',
+        ]);
+ 
+        $data = $request->all();
+        $check = User::create($data);
+ 
+        return Redirect::to("manuscript")->withSuccess('Great! Form successfully submit with validation.');
+ 
+    }
 }
