@@ -81,7 +81,7 @@
                           </div>
                           <div class="form-group">
                             <label for="date of acceptance">&nbsp;&nbsp;&nbsp;vii) Date of acceptance of the manuscript</label>
-                            <input type="date" name="date_of_acceptance" class="form-control" id="date_of_acceptance">
+                              <input type="date" name="date_of_acceptance" class="form-control" id="date_of_acceptance">
                             <span class="text-danger">{{ $errors->first('date_of_acceptance') }}</span>
                           </div>
                           <div class="form-group">
