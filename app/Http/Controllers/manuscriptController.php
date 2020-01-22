@@ -73,35 +73,33 @@ class manuscriptController extends Controller
             $manuscriptdetails->save();
               $data=manuscript::all();
                 return redirect('/index')->with('details',$data);
-               $data=manuscript::all();
+               
         }
         public function save(Request $request)
     {
  
         $request->validate([
-        'name' => 'required|string|unique:us',
-        'designation' => 'required|email|unique:us',
-        'department' => 'required|unique:us',
-        'faculty'=> 'required|unique:us',
-        'title'=> 'required|unique:us',
-        'first_author'=> 'required|unique:us',
-        'corresponding_author'=> 'required|unique:us',
-        'other_author'=> 'required|unique:us',
-        'journal'=> 'required|unique:us',
-        'volume_and_issue_number'=> 'required|unique:us',
-        'date_of_acceptance'=> 'required|unique:us',
-        'issn'=> 'required|unique:us',
-        'publisher'=> 'required|unique:us',
-        'publication_fee'=> 'required|unique:us',
-        'file_copy'=> 'required|unique:us',
-        'file_evidence'=> 'required|unique:us',
-        'file_letter'=> 'required|unique:us',
-        'file_invoice'=> 'required|unique:us',
-        'date1'=> 'required|unique:us',
+        'name' => 'required|string',
+        'designation' => 'required|email',
+        'department' => 'required',
+        'faculty'=> 'required',
+        'title'=> 'required',
+        'first_author'=> 'required',
+        'corresponding_author'=> 'required',
+        'other_author'=> 'required',
+        'journal'=> 'required',
+        'volume_and_issue_number'=> 'required',
+        'date_of_acceptance'=> 'required',
+        'issn'=> 'required',
+        'publisher'=> 'required',
+        'publication_fee'=> 'required',
+        'file_copy'=> 'required',
+        'file_evidence'=> 'required',
+        'file_letter'=> 'required',
+        'file_invoice'=> 'required',
+        'date1'=> 'required',
         ]);
  
-        $data = $request->all();
-        $check = User::create($data);
  
         return Redirect::to("manuscript")->withSuccess('Great! Form successfully submit with validation.');
  

@@ -19,7 +19,7 @@
                   <div class="card-body">
                     <h5 class="card-title"></h5>
                     <p class="card-text">
-                    @if ($message = Session::get('success'))
+                    @if ($message = Session::get('fsuccess'))
     <div class="alert alert-success alert-block">
         <button type="button" class="close" data-dismiss="alert">×</button>
           <strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
                           </div>
                           <div class="form-group">
                             <label for="date of acceptance">&nbsp;&nbsp;&nbsp;vii) Date of acceptance of the manuscript</label>
-                            <input type="date" name="date_of_acceptance" class="form-control" id="date_of_acceptance">
+                              <input type="date" name="date_of_acceptance" class="form-control" id="date_of_acceptance">
                             <span class="text-danger">{{ $errors->first('date_of_acceptance') }}</span>
                           </div>
                           <div class="form-group">
