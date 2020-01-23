@@ -73,12 +73,12 @@ class manuscriptController extends Controller
             $manuscriptdetails->save();
               $data=manuscript::all();
                 return redirect('/index')->with('details',$data);
-               
+               $data=manuscript::all();
         }
         public function save(Request $request)
     {
  
-        Validator::make($request->all(), [
+        $request->validate([
         'name' => 'required|string',
         'designation' => 'required|email',
         'department' => 'required',
@@ -98,10 +98,12 @@ class manuscriptController extends Controller
         'file_letter'=> 'required',
         'file_invoice'=> 'required',
         'date1'=> 'required',
-       
-        ])->validate();
+        ]);
  
-        
  
+        $data = $request->all();
+        $check = manuscript::create($data);
+ 
+        return Redirect('/manuscript')->with('submit_success','Submit Successfully!');
     }
 }
