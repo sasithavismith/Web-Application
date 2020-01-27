@@ -26,11 +26,11 @@
 <div class="sidebar" data-color="black">
      
      <div class="logo">
-       <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-         CT
+       <a class="simple-text logo-mini">
+         
        </a>
-       <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-         Research Grant
+       <a class="simple-text logo-normal">
+       {{ Auth::user()->name }}
        </a>
      </div>
      <div class="sidebar-wrapper" id="sidebar-wrapper">
