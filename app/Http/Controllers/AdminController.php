@@ -49,7 +49,7 @@ public function store4(){
 
     public function dashboard(){
         if(Session::has('adminSession')){
-            //
+            
         }else{
             return redirect('/admin')->with('flash_message_error',"Please login to access");  
         }

@@ -9,9 +9,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Mail\MailtrapExample;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/send-mail', function () {
+
+    Mail::to('newuser@example.com')->send(new MailtrapExample()); 
+
+    return 'A message has been sent to Mailtrap!';
+
+});
 
 Route::get('/', function () {
     return view('welcome');
