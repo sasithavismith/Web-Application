@@ -75,12 +75,18 @@ class manuscriptController extends Controller
                 return redirect('/index')->with('details',$data);
                $data=manuscript::all();
         }
+        public function show(Request $request){
+            $manuscriptdetails= manuscript::find($request->id);
+            //return $manuscriptdetails->name;
+            //return redirect('/admin/manuscriptShow');
+            return view('admin.manuscriptShow',compact('manuscriptdetails'));
+        }
         public function save(Request $request)
     {
  
         $request->validate([
-        'name' => 'required|string',
-        'designation' => 'required|email',
+        'name' => 'required|string|unique:users',
+        'designation' => 'required',
         'department' => 'required',
         'faculty'=> 'required',
         'title'=> 'required',

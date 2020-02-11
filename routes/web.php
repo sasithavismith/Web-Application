@@ -61,6 +61,7 @@ Route::group(['middleware'=>['auth']],function(){
           $data=App\manuscript::all();
           return view('admin.manuscriptview')->with('details',$data);
      });
+     Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
     
 });
  
