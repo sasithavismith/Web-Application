@@ -9,14 +9,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-        public function store(){
-            return view('layouts/form/form1');
-        }
-
+public function store(){
+    return view('layouts/form/form1');
+}
 public function store1(){
     return view('layouts/form/manuscript');
 }
-
 public function store2(){
     return view('layouts/form/higher');
 }

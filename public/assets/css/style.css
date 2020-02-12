@@ -1,0 +1,211 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+    font-family: sans-serif;
+}
+#nav-bar
+{
+	position: sticky;
+	z-index: 10;
+	top: 0;
+}
+.navbar
+{
+	background-image: linear-gradient(to right,#430607,#430607);
+	padding: 0 !important;
+}
+.navbar-brand img
+{
+	height: 69px;
+	padding-left: 40px;
+}
+#navbarNav
+{
+	padding: 0 10px;
+}
+.navbar-toggler
+{
+	outline: none !important;
+}
+.navbar-nav li
+{
+	padding: 0 10px;
+	border-right: 1px solid #520103;
+    display: block;
+    word-wrap: break-word;
+    font-family: "myriad-pro-n6","myriad-pro",myriad,verdana,arial,sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+.navbar-nav li a
+{
+	font-weight: 500;
+	float: right;
+	text-align: right;
+}
+.dropdown-menu
+{
+	background: #FFFFFF;
+    padding: 0;
+    font-size: 13px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none !important;
+    opacity: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    margin: 2px 0 0;
+    list-style: none;
+    text-align: left;
+    color: #FFF;
+}
+.dropdown-menu li a
+{
+	font-size: 12px;
+    border-top: #CCC solid 1px;
+    line-height: 2.5em;
+    color: #900;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+}
+
+
+.admin
+{
+	text-align: center;
+}
+.fa-bars
+{
+	color: #fff;
+	font-size: 30px !important;
+}
+
+/*Header Section */
+
+#header-section
+{
+	margin: 5px;
+	padding: 5px;
+}
+.logo-text
+{
+	color: #FFF;
+    padding: 0;
+    margin: 5px 0;
+}
+
+#header
+{
+	background-image: linear-gradient(to right,#520103,#520103);
+	padding  -top: 5%;
+	color: #fff;  
+}
+.title
+{
+	margin-top: 100px;
+}
+.bottom
+{
+	width: 100%;
+}
+
+/*Footer Section*/
+#footer
+{
+	background: linear-gradient(to right,#520103,#520103);
+	color: #fff;	
+}
+.footer-img
+{
+	width: 100%;
+	transform: rotate(180deg);
+}
+.header-section
+{
+	background: #520103;
+}
+.img-logo
+{
+	height: 69px;
+	float: left;
+    padding: 5px 10px;
+    margin: 2px 20px 0 0;
+    vertical-align: middle;
+}
+.logo-text
+{
+	padding: 0;
+    margin: 7px 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 20px;
+}
+.logo-text-4
+{
+	padding-left: 75px;
+	margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+}
+#content
+{
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.content-title
+{
+	color: #520103;
+}
+
+.application a:hover
+{
+    text-decoration: none;
+}
+
+#about-us
+{
+	position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    font-size: 13px;
+    margin-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.card
+{
+    width: 100%;
+}
+
+/* Admin Login Section */
+
+.bg-admin
+{
+    background: #d2d6de;
+}
+.admin-login
+{
+    font-size: 18px;
+    
+}
+
+
+
+

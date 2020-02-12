@@ -5,11 +5,25 @@
     <title>Laravel 5.7 JQuery Form Validation Example - ItSolutionStuff.com</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    
+    <div class="container">	
+      <section class="header-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="head">
+              <img src="assets/img/logo.png" class="img-logo">
+              <h4 class="logo-text">Sabaragamuwa University of Sri Lanka</h4>
+              <h4 class="logo-text-4">Belihuloya Sri Lanka</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="jumbotron">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center content-title">
             <div class="col-md-8">
                 <h3>Application For Requesting Manuscript Publication Fee Sabaragamuwa University of Sri Lanka</h3>
                 <hr class="my-4">
@@ -21,13 +35,13 @@
                     <h5 class="card-title"></h5>
                     <p class="card-text">
                     @if ($message = Session::get('submit_success'))
-    <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-          <strong>{{ $message }}</strong>
-    </div>
-    <br>
-    @endif
-                        <form action="{{url('manuscript')}}" method="post" enctype="multipart/form-data">
+                      <div class="alert alert-success alert-block">
+                          <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                      </div>
+                      <br>
+                    @endif
+                      <form action="{{url('manuscript')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                           <label for="formGroupExampleInput">1. Name</label>
@@ -170,6 +184,7 @@
             </div>
         </div>
     </div>
+  
     <script>
       document.addEventListener('DOMContentLoaded', function(e) {
           FormValidation.formValidation(
