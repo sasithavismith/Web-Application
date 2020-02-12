@@ -6,9 +6,10 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" href="assets/css/style.css">
     
   <title>
-  Web Application
+ Admin Login
   </title>
   
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -21,13 +22,26 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 
-  <body class=""z>
+  <body class="bg-admin">
   <div class="container">
       <div class="content mb-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-md-8">
+            <section class="header-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="head">
+                      <img src="assets/img/logo.png" class="img-logo">
+                      <h4 class="logo-text">Sabaragamuwa University of Sri Lanka</h4>
+                      <h4 class="logo-text-4">Belihuloya Sri Lanka</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             @if(Session::has('flash_message_error'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-primary alert-block">
               <button type="button" class="close" data-dismiss="alert">x</button>
               <strong>{!! Session('flash_message_error') !!}</strong>
             </div>
@@ -38,10 +52,9 @@
               <strong>{!! session('flash_message_success') !!}</strong>
             </div>
             @endif
-            <div class="card" style="background-color: black;">
-              <div class="card-title"><img src="assets/img/7.jpg" alt="img" style="width: 750px; height: 200px;"></div>
+            <div class="card mt-5 mb-5">
               <div class="card-header">
-                <h4 class="card-title text-center text-light"><b>Login Here</b></h4>
+                <h4 class="card-title text-center"><b>Login Here</b></h4>
               </div>
               <div class="card-body">
                 <div class="row justify-content-center">
@@ -51,21 +64,21 @@
 
                     <form class="form-horizontal" method="post" action="{{ url('/admin') }}">
                         {{csrf_field()}}
-                        <div class="form-group">
-				                  <label for="name" class="col-md-4 control-label text-light">Username</label>
+                        <div class="form-group admin-login">
+				                  <label for="name" class="col-md-4 control-label">Username</label>
                             <div class="col-md-6">
                               <input id="name" type="text" class="form-control" name="name">
                             </div>
                         </div>
-                        <div class="form-group">
-                          <label for="password" class="col-md-4 control-label text-light">Password</label>
+                        <div class="form-group admin-login">
+                          <label for="password" class="col-md-4 control-label">Password</label>
                             <div class="col-md-6">
                               <input id="password" type="password" class="form-control" name="password">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group admin-login">
                           <div class="col-md-8 col-md-offset-4">
-                            <input type="submit"  value="Login" class="btn btn-primary">
+                            <input type="submit"  value="Login" class="btn btn-info">
                           </div>
                         </div>
                       </form>

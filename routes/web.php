@@ -28,14 +28,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-Route::get('/form1','AdminController@store');
-
-Route::get('/manuscript','AdminController@store1');
-Route::get('/higher','AdminController@store2');
-Route::get('/formB','AdminController@store3');
-Route::get('/formA','AdminController@store4');
-
+// Route::get('formA','AdminController@view11');
 Route::get('/index','AdminController@show');
 
  Route::post('/manuscript', 'manuscriptController@save');
@@ -73,4 +66,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
+Route::get('/form1', 'AdminController@store');
+Route::get('/manuscript', 'AdminController@store1');
+Route::get('/higher', 'AdminController@store2');
+Route::get('/formB', 'AdminController@store3');
+Route::get('/formA', 'AdminController@store4');
+
 
