@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="black">
+<div class="sidebar" data-color="red">
      
      <div class="logo">
        <a class="simple-text logo-mini">
