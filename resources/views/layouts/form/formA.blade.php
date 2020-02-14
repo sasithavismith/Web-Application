@@ -26,7 +26,7 @@
 
     <div class="jumbotron">
         <div class="row justify-content-center content-title">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <h4>Application for Encouragement Allowance and Finacial Assistance to Attend Overseas International Conference\Symposium\Workshop</h4>
                 <hr class="my-4">
                 <p></p>
