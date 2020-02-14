@@ -47,37 +47,44 @@
                     <form>
                 
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">1.Project Title</label>
-                            <input type="text" class="form-control" name="project" id="project" value="" required>
-                           
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label for="exampleFormControlInput1">1. Project Title</label>
+                                    <input type="text" class="form-control" name="project" id="project" value="" required>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">2.Research areas</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Agriculture and Animal Science</option>
-                                <option>Enviromental and Biodiversity</option>
-                                <option>Engneering and Surveying Science</option>
-                                <option>Food science and Technology</option>
-                                <option>Natural Resources</option>
-                                <option>Social Science</option>
-                                <option>Management Studies</option>
-                                <option>Technology Development and Promotion</option>
-                                <option>Languages</option>
-                                <option>Fundermental Research</option>
-                            </select>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label for="exampleFormControlSelect1">2. Research areas</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Agriculture and Animal Science</option>
+                                            <option>Enviromental and Biodiversity</option>
+                                            <option>Engneering and Surveying Science</option>
+                                            <option>Food science and Technology</option>
+                                            <option>Natural Resources</option>
+                                            <option>Social Science</option>
+                                            <option>Management Studies</option>
+                                            <option>Technology Development and Promotion</option>
+                                            <option>Languages</option>
+                                            <option>Fundermental Research</option>
+                                        </select>
+                                </div>
+                            </div>
                         </div>
-                    <div class="invesigator">
+                        <div class="invesigator">
                         <div class="form-group">
-                            <label>3.Investigators
-                                <br>Principal Investigator</label>
+                            <label><b>3.  Investigators</b>
+                                <br><b>&nbsp;&nbsp;&nbsp; Investigator</b></label>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label>Name and Designation</label>
+                                <label>  Name and Designation</label>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Malling Address</label>
+                                <label>  Malling Address</label>
                                 <input type="text" class="form-control">
                             </div>
                         </div>
@@ -105,7 +112,7 @@
                         <div class="co-investigator">
 
                             <div class="form-group">
-                                    <label>Co-Investigator-1</label>
+                                    <label><b>&nbsp;&nbsp;&nbsp;Co-Investigator-1</b></label>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -141,7 +148,7 @@
                                 <div class="co-investigator">
 
                                         <div class="form-group">
-                                                <label>Co-Investigator-2</label>
+                                                <label><b>&nbsp;&nbsp;&nbsp;Co-Investigator-2</b></label>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">

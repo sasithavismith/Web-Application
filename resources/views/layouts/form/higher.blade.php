@@ -24,7 +24,7 @@
     </section>
     <div class="jumbotron">
         <div class="row justify-content-center content-title">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <h4>Application for the Research Allowance in Accordance with the Higher Education Circular 1/2019</h4>
                 <hr class="my-4">
                 <p></p>
