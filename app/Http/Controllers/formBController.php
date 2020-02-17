@@ -41,5 +41,11 @@ class formBController extends Controller
             return redirect('/index')->with('details',$data);
            $data=formB::all();
     }
+    public function show(Request $request){
+      $formBdetails= formB::find($request->id);
+      //return $manuscriptdetails->name;
+      //return redirect('/admin/manuscriptShow');
+      return view('admin.formBShow',compact('formBdetails'));
+  }
 
 }
