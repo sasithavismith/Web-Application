@@ -32,6 +32,7 @@ Auth::routes();
 Route::get('/index','AdminController@show');
 
  Route::post('/manuscript', 'manuscriptController@save');
+ Route::post('/formB', 'formBController@save');
 
 Route::match(['get','post'],'/admin','AdminController@login');
 
@@ -42,6 +43,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/admin/settings','AdminController@settings');
     Route::get('/admin/check-pwd','AdminController@chkpwd');
     Route::match(['get','post'],'/admin/update-pwd','AdminController@updatePassword');
+    
     Route::post('/saveformB','formBController@store');
      Route::get('/admin/formBview', function () {
          Route::post('/saveformB','formBController@store');
@@ -49,7 +51,8 @@ Route::group(['middleware'=>['auth']],function(){
           return view('admin.formBview')->with('details',$data);
          
      });
-     Route::get('/admin/formBShow/{id}','formBController@show'); 
+     Route::get('/admin/formBShow/{id}','formBController@show');
+
      Route::post('/savemanuscript','manuscriptController@store1');
      Route::get('/admin/manuscriptview', function () {
          Route::post('/savemanuscript','manuscriptController@store1');
@@ -57,7 +60,7 @@ Route::group(['middleware'=>['auth']],function(){
           return view('admin.manuscriptview')->with('details',$data);
      });
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
-    
+     Route::get('/markAsapproved/{id}','manuscriptController@updateApproved');
 });
 
 

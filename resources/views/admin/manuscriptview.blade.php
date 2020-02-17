@@ -15,6 +15,8 @@
                     <tr>
                       <th style="color: #520103;">Id</th>
                       <th style="color: #520103;">Full Name</th> 
+                      <th style="color: #520103;">Approved</th> 
+                      <th style="color: #520103;">Action</th> 
                     </tr>
                   </thead>
                   <tbody>
@@ -22,11 +24,19 @@
                    <tr>
                        <td>{{$manuscriptdetails->id}}</td>
                        <td>{{$manuscriptdetails->name}}</td>
-                       
+                       <td>
+                         @if($manuscriptdetails->isapproved)
+                        <button class="btn btn-success">Approved</button>
+                        @else
+
+             <button class="btn btn-warning">Not Approved</button>
+             @endif
+                        </td>
+                        <td>
+                          <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Mark As Approved
+                        </td>
                            <td><a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a></td>
-                           <td><a href="" class="btn btn-outline-success">APPROVE</a></td>
-                           <td><a href="" class="btn btn-outline-info">NOT APPROVE</a></td>
-                       
+                          
                        </tr>
     @endforeach
                   </tbody>
