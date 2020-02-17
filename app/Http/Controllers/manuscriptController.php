@@ -81,6 +81,13 @@ class manuscriptController extends Controller
             //return redirect('/admin/manuscriptShow');
             return view('admin.manuscriptShow',compact('manuscriptdetails'));
         }
+        public function updateApproved($id){
+            $manuscriptdetails=manuscript::find($id);
+            $manuscriptdetails->isapproved=1;
+            $manuscriptdetails->save();
+            return redirect()->back();
+
+        }
         public function save(Request $request)
     {
  
