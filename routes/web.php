@@ -57,6 +57,11 @@ Route::group(['middleware'=>['auth']],function(){
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
     
 });
+
+
+/* Route::group(['as'=>'Vice Chancellor.','prefix'=>'Vice Chancellor','namespace'=>'Vice Chancellor','middleware'=>['auth','Vice Chancellor']],function(){
+
+}); */
  
 Auth::routes();
 

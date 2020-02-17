@@ -121,7 +121,7 @@
 			</div>
 			<div class="col-md-3 text-white footer-box mt-4">
 				<h5>Quick Links</h5>
-				<p>Admin Login</p>
+				<p><a href="/admin" class="start"> Admin Login</a></p>
 				<p>Notices</p>
 			</div>
 			<div class="col-md-3 text-white footer-box mt-4">
