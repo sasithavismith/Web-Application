@@ -23,21 +23,28 @@
                     <tr>
                       <th>Id</th>
                       <th>Full Name</th>
-                     
+                      <th>Designation</th>
+                      <th>Department</th>
+                      <th>Faculty</th>
+                      <th>Tel</th>
+                      <th>Email</th>
                       
                       
                     </tr>
                   </thead>
                   <tbody>
-                   @foreach($details as $formBdetails)
+                   
+                  
                    <tr>
                        <td>{{$formBdetails->id}}</td>
                        <td>{{$formBdetails->full_name}}</td>
-                       <td><a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-outline-danger">SHOW</a></td>
-                           <td><a href="" class="btn btn-outline-success">APPROVE</a></td>
-                           <td><a href="" class="btn btn-outline-info">NOT APPROVE</a></td>
+                       <td>{{$formBdetails->designation}}</td>
+                       <td>{{$formBdetails->department}}</td>
+                       <td>{{$formBdetails->faculty}}</td>
+                       <td>{{$formBdetails->tel}}</td>
+                       <td>{{$formBdetails->email}}</td>
                      </tr>
-    @endforeach
+
                   </tbody>
                 </table> 
               

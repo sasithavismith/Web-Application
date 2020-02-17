@@ -47,7 +47,9 @@ Route::group(['middleware'=>['auth']],function(){
          Route::post('/saveformB','formBController@store');
           $data=App\formB::all();
           return view('admin.formBview')->with('details',$data);
+         
      });
+     Route::get('/admin/formBShow/{id}','formBController@show'); 
      Route::post('/savemanuscript','manuscriptController@store1');
      Route::get('/admin/manuscriptview', function () {
          Route::post('/savemanuscript','manuscriptController@store1');
