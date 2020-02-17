@@ -1,18 +1,20 @@
 @extends('layouts.adminlayouts.admin_design')
-@extends('layouts.adminlayouts.admin_sidebar')
 
 @section('content')
-    <div class="container">
-      <div class="row justify-content-center">
+    <div class="container mt-5 mb-5">
+      <div class="row justify-content-center mb-5">
         <div class="col-md-6">
-                <h3>Requesting Manuscript Publication Fee</h3>
+                <h3 class="mb-5" style="color: #520103;"></h3>
               </div>
               
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th>Id</th>
-                      <th>Full Name</th> 
+                      <th></th>
+                      <th style="color: saddlebrown;">Requesting Manuscript Publication Fee</th></tr>
+                    <tr>
+                      <th style="color: #520103;">Id</th>
+                      <th style="color: #520103;">Full Name</th> 
                     </tr>
                   </thead>
                   <tbody>
@@ -21,9 +23,9 @@
                        <td>{{$manuscriptdetails->id}}</td>
                        <td>{{$manuscriptdetails->name}}</td>
                        
-                           <td><a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-info">SHOW</a></td>
-                           <td><a href="" class="btn btn-success">APPROVE</a></td>
-                           <td><a href="" class="btn btn-danger">NOT APPROVE</a></td>
+                           <td><a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a></td>
+                           <td><a href="" class="btn btn-outline-success">APPROVE</a></td>
+                           <td><a href="" class="btn btn-outline-info">NOT APPROVE</a></td>
                        
                        </tr>
     @endforeach
