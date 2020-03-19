@@ -28,8 +28,8 @@
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="#">Application 3</a>
-                 <a class="dropdown-item" href="#">Application 4</a>
+                 <a class="dropdown-item" href="#">Form B</a>
+                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication fee</a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>
              </li>
@@ -45,8 +45,8 @@
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="{{url('/admin/formBview')}}">Application 3</a>
-                 <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Application 4</a>
+                 <a class="dropdown-item" href="{{url('/admin/formBview')}}">Form B</a>
+                 <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Manuscript Publication fee</a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>
              </li>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-
-</head>
+  </head>
 <body>
   <div class="jumbotron">
     <div class="container">
@@ -102,21 +101,24 @@
                       <th>Date</th>
                       <td>{{$manuscriptdetails->date1}}</td>
                     </tr>
+                    <tr>
+                      <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</th>
+                      <td> 
+                        @if($manuscriptdetails->isapproved)
+                        <button class="btn btn-outline-success">Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+                      </td>
+                    </tr>
                   </thead>
-                  <tbody>
-                  </tbody>
-                </table> 
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                
-                
-              
-              
-            
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html> 
