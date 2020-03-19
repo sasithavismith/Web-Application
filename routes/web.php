@@ -33,6 +33,7 @@ Route::get('/index','AdminController@show');
 
  Route::post('/manuscript', 'manuscriptController@save');
  Route::post('/formB', 'formBController@save');
+ Route::post('/higher', 'Research_AllowanceController@save');
 
 Route::match(['get','post'],'/admin','AdminController@login');
 
@@ -81,5 +82,9 @@ Route::get('/manuscript', 'AdminController@store1');
 Route::get('/higher', 'AdminController@store2');
 Route::get('/formB', 'AdminController@store3');
 Route::get('/formA', 'AdminController@store4');
+
+Route::get('/approve/manuscriptApprove','manuscriptController@updateApproved');
+
+Route::get('/approve/formB_Approve','manuscriptController@updateApprovedFormB');
 
 

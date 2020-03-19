@@ -40,7 +40,7 @@
                       </div>
                       <br>
                     @endif
-                        <form enctype="multipart/form-data">
+                        <form action="{{url('/higher')}}" method="post" enctype="multipart/form-data">
                           {{csrf_field()}}
                         <div class="form-group">
                         <label>1. Name of Applicant:</label>
@@ -59,35 +59,46 @@
                         <input type="text" name="department" class="form-control" id="department" value="{{old('department')}}">
                         <span class="text-danger">{{ $errors->first('department') }}</span><br>
                         <label>ii) Faculty:</label>
-                        <input type="text" name="faculty" class="form-control" requireid="faculty" value="{{old('faculty')}}">
+                        <input type="text" name="faculty" class="form-control" id="faculty" value="{{old('faculty')}}">
                         <span class="text-danger">{{ $errors->first('faculty') }}</span>
                         </div>
                         
-                         <div class="form-group">
+                         <!-- <div class="form-group">
                              <label>4. Category under which you become eligible</label>
                              <div class="row">
+                               
                         <div class="form-group col md-4 form-check">
-                        <label class="form-check-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="form-check-input" name="a"  type="checkbox" id="" value="{{old('')}}">
-                        <span class="text-danger">{{ $errors->first('') }}</span>  (a)
-                        </label>
-                        </div>
-
-                        <div class="form-group col md-4 form-check">
-                        <label class="form-check-label">
-                        <input class="form-check-input" name="b" type="checkbox">
-                        <span class="text-danger">{{ $errors->first('') }}</span>  (b)
-                        </label>
-                        </div>
-
-                        <div class="form-group col md-4 form-check">
-                        <label class="form-check-label">
-                        <input class="form-check-input" name="c" type="checkbox">
-                        <span class="text-danger">{{ $errors->first('') }}</span>  (c)
+                        <label class="form-radio">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-radio" name="a"  type="radio" id="" value="{{old('')}}">
+                        <span class="text-danger">{{ $errors->first('a') }}</span>  (a)
+                        <input class="form-radio" name="b" type="radio">
+                        <span class="text-danger">{{ $errors->first('b') }}</span>  (b)
+                        <input class="form-radio" name="c" type="radio">
+                        <span class="text-danger">{{ $errors->first('c') }}</span>  (c)
                         </label>
                         </div>
                          </div>
+                        </div> -->
+                 <!--        <div class="form-group">
+                          <label>4. Category under which you become eligible</label>
+                          <div class="row">
+                            
+                     <div class="form-group col md-4 form-check">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="a" id="a" value="{{old('a')}}">
+                          <span class="text-danger">{{ $errors->first('a') }}</span> Option A
                         </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="a" id="a" value="{{old('b')}}">
+                          <span class="text-danger">{{ $errors->first('b') }}</span>  Option B
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="a" id="a" value="{{old('c')}}">
+                          <span class="text-danger">{{ $errors->first('c') }}</span>  Option C
+                        </div>
+                        </div>
+                        </div> -->
+                        
 
                         <div class="form-group">
                             <label>5. If you are applying under category (a) or (c) give evidences (at least one of the following) to prove your eligibility.
@@ -114,7 +125,7 @@
                                 <br>
                                 v)Book/Monograph/Text book scheduled to published in 2019. Any other type of research or publication(p. specif)
                                 <input type="text" name="any_type" class="form-control" id="customFile" value="{{old('any_type')}}" >
-                                <span class="text-danger">{{ $errors->first('a') }}</span>
+                                <span class="text-danger">{{ $errors->first('any_type') }}</span>
                                 
                         </div>
 
@@ -135,7 +146,7 @@
                                     <br>
                                     (d) Project duration (Months) and Time frame in a proposal.
                                     <input type="text" class="form-control" name="duration" id="duration" value="{{old('duration')}}" >
-                                    <span class="text-danger">{{ $errors->first('') }}</span>
+                                    <span class="text-danger">{{ $errors->first('duration') }}</span>
                                     <br>
                                     (e) Expected date of Commencement of Project.
                                     <input type="text" class="form-control" name="expected_date" id="expected_date" value="{{old('expected_date')}}" >
@@ -170,7 +181,7 @@
                                 </div>
                               </div>
                                 
-
+                            </form>
                            </div>
                           
                             </div>

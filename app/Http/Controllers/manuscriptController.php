@@ -119,4 +119,8 @@ class manuscriptController extends Controller
  
         return Redirect('/manuscript')->with('submit_success','Submit Successfully!');
     }
+
+
+
+    
 }

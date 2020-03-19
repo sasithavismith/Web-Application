@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Web Application of research</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+@extends('layouts.adminlayouts.admin_design')
 
-</head>
-<body>
-    <div class="container-fluid">
-        <hr>
-        <div class="row-fluid">
-          <div class="span12">
-            <div class="widget-box">
-              <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                <h5>Application 3 Detail</h5>
-              </div>
-              <div class="widget-content nopadding">
-                <table class="table table-bordered table-striped  table-dark">
-                  <thead>
-                    <tr>
-                      <th>Id</th>
-                      <th>Full Name</th>
-                     
-                      
-                      
-                    </tr>
-                  </thead>
-                  <tbody>
-                   @foreach($details as $formBdetails)
-                   <tr>
-                       <td>{{$formBdetails->id}}</td>
-                       <td>{{$formBdetails->full_name}}</td>
-                       <td><a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-outline-danger">SHOW</a></td>
-                           <td><a href="" class="btn btn-outline-success">APPROVE</a></td>
-                           <td><a href="" class="btn btn-outline-info">NOT APPROVE</a></td>
-                     </tr>
-    @endforeach
-                  </tbody>
-                </table> 
-              
-              
-            
-</body>
-</html> 
+@section('content')
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-6">
+        <h3 class="mb-5" style="color: #520103;"></h3>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th style="color: saddlebrown;">Form B</th>
+          </tr>
+          <tr>
+            <th style="color: #520103;">Id</th>
+            <th style="color: #520103;">Full Name</th> 
+            <th style="color: #520103;">Approved</th> 
+            <th style="color: #520103;">Action</th> 
+          </tr>
+        </thead>
+      <tbody>
+
+        @foreach($details as $formBdetails)
+
+          <tr>
+            <td>{{$formBdetails->id}}</td>
+            <td>{{$formBdetails->full_name}}</td>
+            <td>
+              @if($formBdetails->isapproved)
+              <button class="btn btn-outline-success">Approved</button>
+              @else
+              <button class="btn btn-outline-info">Not Approved</button>
+              @endif
+            </td>
+            <td>
+              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
+            </td>
+            <td>
+              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-outline-danger">SHOW</a>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+       @endsection
