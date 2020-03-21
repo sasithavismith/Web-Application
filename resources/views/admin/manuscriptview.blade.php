@@ -26,7 +26,7 @@
           <tr>
             <td>{{$manuscriptdetails->id}}</td>
             <td>{{$manuscriptdetails->name}}</td>
-            <td>
+            <!-- <td>
               @if($manuscriptdetails->isapproved)
               <button class="btn btn-outline-success">Approved</button>
               @else
@@ -35,7 +35,7 @@
             </td>
             <td>
               <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
-            </td>
+            </td> -->
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>

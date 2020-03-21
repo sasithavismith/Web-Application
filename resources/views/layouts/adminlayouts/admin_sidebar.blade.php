@@ -20,7 +20,7 @@
          <li class="dropdown">
                <a class="dropdown-toggle" id="DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  <i class="now-ui-icons location_world"></i>
-                <p>Pending Request</p>
+                <p>Achieved Request</p>
                  <p>
                    <span class="d-lg-none d-md-block">Forms</span>
                  </p>
@@ -37,7 +37,7 @@
               <li class="dropdown">
                <a class="dropdown-toggle" id="DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  <i class="now-ui-icons location_map-big"></i>
-             <p>Achieved Request</p>
+             <p>Pending Request</p>
                  <p>
                    <span class="d-lg-none d-md-block">Forms</span>
                  </p>
