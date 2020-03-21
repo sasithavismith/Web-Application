@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\manuscript;
+
 use Illuminate\Support\Facades\Validator;
 
 
@@ -81,7 +82,15 @@ class manuscriptController extends Controller
             //return redirect('/admin/manuscriptShow');
             return view('admin.manuscriptShow',compact('manuscriptdetails'));
         }
-        public function updateApproved($id){
+        public function updateApproved( ){
+           // $approveddetail=manuscript::find($request->isapproved);
+           
+            $approveddetail=manuscript::where('isapproved',1)->get();
+
+            return view('admin.manuscriptApprove')->with('approved',$approveddetail);
+
+        }
+        public function updateApprovedd($id){
             $manuscriptdetails=manuscript::find($id);
             $manuscriptdetails->isapproved=1;
             $manuscriptdetails->save();

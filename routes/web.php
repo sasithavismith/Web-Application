@@ -61,7 +61,9 @@ Route::group(['middleware'=>['auth']],function(){
           return view('admin.manuscriptview')->with('details',$data);
      });
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
-     Route::get('/markAsapproved/{id}','manuscriptController@updateApproved');
+     Route::get('/markAsapproved','manuscriptController@updateApproved');
+     Route::get('/markAsapproved/{id}','manuscriptController@updateApprovedd');
+     
 });
 
 

@@ -46,7 +46,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                  
+                  @foreach($approved as $manuscriptdetails)
                    <tr>
                        
                        <td>{{$manuscriptdetails->id}}</td>
@@ -71,7 +71,7 @@
                        <td>{{$manuscriptdetails->date1}}</td>
                     
                      </tr>
-    
+                    @endforeach 
                   </tbody>
                 </table> 
               
