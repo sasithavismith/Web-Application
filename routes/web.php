@@ -57,7 +57,7 @@ Route::group(['middleware'=>['auth']],function(){
      Route::post('/savemanuscript','manuscriptController@store1');
      Route::get('/admin/manuscriptview', function () {
          Route::post('/savemanuscript','manuscriptController@store1');
-          $data=App\manuscript::all();
+          $data=App\manuscript::where('isapproved',0)->get();
           return view('admin.manuscriptview')->with('details',$data);
      });
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
