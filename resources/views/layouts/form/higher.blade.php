@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Laravel 5.7 JQuery Form Validation Example - ItSolutionStuff.com</title>
+    <title>Application for the Research Allowance in Accordance with the Higher Education Circular 1/2019</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
     <link rel="stylesheet" href="assets/css/style.css">

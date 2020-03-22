@@ -1,3 +1,54 @@
+@extends('layouts.adminlayouts.admin_design')
+
+@section('content')
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-6">
+        <h3 class="mb-5" style="color: #520103;"></h3>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th style="color: saddlebrown;">Requesting Manuscript Publication Fee</th>
+          </tr>
+          <tr>
+            <th style="color: #520103;">Id</th>
+            <th style="color: #520103;">Full Name</th> 
+            <th style="color: #520103;">View</th> 
+            <th></th> 
+          </tr>
+        </thead>
+      <tbody>
+
+      @foreach($approved as $manuscriptdetails)
+
+          <tr>
+            <td>{{$manuscriptdetails->id}}</td>
+            <td>{{$manuscriptdetails->name}}</td>
+            <!-- <td>
+              @if($manuscriptdetails->isapproved)
+              <button class="btn btn-outline-success">Approved</button>
+              @else
+              <button class="btn btn-outline-info">Not Approved</button>
+              @endif
+            </td>
+            <td>
+              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
+            </td> -->
+            <td>
+              <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
+            </td>
+            <td>
+              <button class="btn btn-primary">Approved</button>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+      @endsection
+
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,4 +129,4 @@
               
             
 </body>
-</html> 
+</html>  -->

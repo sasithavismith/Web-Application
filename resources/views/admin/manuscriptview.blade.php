@@ -15,8 +15,7 @@
           <tr>
             <th style="color: #520103;">Id</th>
             <th style="color: #520103;">Full Name</th> 
-            <th style="color: #520103;">Approved</th> 
-            <th style="color: #520103;">Action</th> 
+            <th style="color: #520103;">View</th>  
           </tr>
         </thead>
       <tbody>
@@ -38,6 +37,9 @@
             </td> 
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
+            </td>
+            <td>
+              <button class="btn btn-dark">Not Approved</button>
             </td>
           </tr>
           @endforeach
