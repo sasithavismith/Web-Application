@@ -94,7 +94,8 @@ class manuscriptController extends Controller
             $manuscriptdetails=manuscript::find($id);
             $manuscriptdetails->isapproved=1;
             $manuscriptdetails->save();
-            return redirect()->back();
+            return redirect('/admin/manuscriptview');
+           // return redirect()->back();
 
         }
         public function save(Request $request)
