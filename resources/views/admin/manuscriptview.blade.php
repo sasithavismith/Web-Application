@@ -31,10 +31,10 @@
               @else
               <button class="btn btn-outline-info">Not Approved</button>
               @endif
-            </td>
+            </td> -->
             <td>
               <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
-            </td> -->
+            </td> 
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>

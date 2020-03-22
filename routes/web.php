@@ -63,6 +63,7 @@ Route::group(['middleware'=>['auth']],function(){
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
      Route::get('/markAsapproved','manuscriptController@updateApproved');
      Route::get('/markAsapproved/{id}','manuscriptController@updateApprovedd');
+     Route::get('/admin/manuscriptview','manuscriptController@grantadmin');
      
 });
 

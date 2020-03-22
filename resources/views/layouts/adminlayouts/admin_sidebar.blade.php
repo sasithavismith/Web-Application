@@ -40,7 +40,7 @@
          <li class="dropdown">
                <a class="dropdown-toggle" id="DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  <i class="now-ui-icons location_world"></i>
-                <p>Achieved Request</p>
+                <p>Achieved Request </p>
                  <p>
                    <span class="d-lg-none d-md-block">Forms</span>
                  </p>
@@ -49,7 +49,7 @@
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
                  <a class="dropdown-item" href="#">Form B</a>
-                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication fee</a>
+                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication fee </a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>
              </li>
