@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\manuscript;
-
+use Auth;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -98,6 +100,42 @@ class manuscriptController extends Controller
            // return redirect()->back();
 
         }
+        public function grantadmin(){
+            // $user = Auth::find('name', $request->name)->first();
+
+            // switch ($user->name){
+            //     case 'Grant admin':
+            //         $grantadmin=manuscript::where('isapproved',1)->get();
+            //            return view('admin.manuscriptgrant')->with('approved',$grantadmin);
+                   
+             if(Auth::user()->id=='2'){
+                $grantadmin=manuscript::where('isapproved',1)->get();
+                     return view('admin.manuscriptview')->with('details',$grantadmin);
+    }else{
+        $grantadmin=manuscript::where('isapproved',0)->get();
+                     return view('admin.manuscriptview')->with('details',$grantadmin);;
+    }
+        }
+        // public function updateApprovedean($id){
+        //     $manuscriptdetails=manuscript::find($id);
+        //     $manuscriptdetails->isapprovedean=1;
+        //     $manuscriptdetails->save();
+        //     return redirect('/admin/manuscriptview');
+        //    // return redirect()->back();
+
+        // }
+        //     $grantadmin=User::where(['name'=>Auth::user('Grant Admin')->name])->first();
+        //     $grantadmin=manuscript::where('isapproved',1)->get();
+        //     return view('admin.manuscriptgrant')->with('approved',$grantadmin);
+            
+        // }
+
+        // public function grantadmin(){
+        //     $grantadmin=User::where(['name'=>Auth::user('Grant Admin')->name])->first();
+        //     $grantadmin=manuscript::where('isapproved',1)->get();
+        //     return view('admin.manuscriptgrant')->with('approved',$grantadmin);
+            
+        // }
         public function save(Request $request)
     {
  
