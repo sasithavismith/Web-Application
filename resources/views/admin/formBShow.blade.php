@@ -49,7 +49,7 @@
                   <th>Email</th>
                   <td>{{$formBdetails->email}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <th><a href="#" class="btn btn-outline-secondary">Mark As Approved</th>
                   <td> 
                     @if($formBdetails->isapproved)
@@ -58,7 +58,7 @@
                     <button class="btn btn-outline-info">Not Approved</button>
                     @endif
                   </td>
-                </tr>
+                </tr> -->
               </thead>
             </table>
           </div>

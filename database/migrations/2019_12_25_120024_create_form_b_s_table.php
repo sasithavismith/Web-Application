@@ -26,7 +26,10 @@ class CreateFormBSTable extends Migration
             $table->string('country');
             $table->string('period');
             $table->string('title');
-            $table->boolean('isapproved')->default(0);
+            $table->boolean('isapprovedvc')->default(0);
+            $table->boolean('isapprovedean')->default(0);
+            $table->boolean('isapprovedgrant')->default(0);
+            $table->boolean('isapprovedhead')->default(0);
             $table->timestamps();
             
         });

@@ -26,15 +26,15 @@
           <tr>
             <td>{{$formBdetails->id}}</td>
             <td>{{$formBdetails->full_name}}</td>
-            <td>
+           <!--  <td>
               @if($formBdetails->isapproved)
               <button class="btn btn-outline-success">Approved</button>
               @else
               <button class="btn btn-outline-info">Not Approved</button>
               @endif
-            </td>
+            </td> -->
             <td>
-              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
+              <a href="/markAsapprovedformB/{{$formBdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
             </td>
             <td>
               <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-outline-danger">SHOW</a>

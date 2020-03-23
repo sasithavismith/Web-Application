@@ -38,13 +38,13 @@
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>
-            <td>
+            <!-- <td>
             @if(Auth::user()->id=='1')
               <button class="btn btn-dark">Not Approved</button>
               @endif
             
               
-            </td>
+            </td> -->
           </tr>
           @endforeach
         </tbody>
