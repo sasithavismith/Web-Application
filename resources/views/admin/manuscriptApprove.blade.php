@@ -15,7 +15,7 @@
           <tr>
             <th style="color: #520103;">Id</th>
             <th style="color: #520103;">Full Name</th> 
-            <th style="color: #520103;">View</th> 
+            <th style="color: #520103;">Action</th> 
             <th></th> 
           </tr>
         </thead>
@@ -36,19 +36,35 @@
             <td>
               <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
             </td> -->
-            <td>
+            <!-- <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
-            </td>
+            </td> -->
             <td>
             @if(Auth::user()->id=='1')
-              <button class="btn btn-primary"> VC Approved</button>
+              <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-primary"> VC Approved</a>
+          
               @endif
-            </td>
-            <td>
+            
+            
             @if(Auth::user()->id=='2')
-              <button class="btn btn-primary"> Dean Approved</button>
+            <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-primary"> Dean Approved</a>
+          
               @endif
+              @if(Auth::user()->id=='3')
+              <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-primary"> Grant Approved</a>
+          
+              @endif
+            
+            
+            @if(Auth::user()->id=='4')
+            <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-primary"> Head of the department Approved</a>
+          
+              
+              @endif
+
             </td>
+            
+            
           </tr>
           @endforeach
         </tbody>
