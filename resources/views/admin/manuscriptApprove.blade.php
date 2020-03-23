@@ -40,7 +40,14 @@
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>
             <td>
-              <button class="btn btn-primary">Approved</button>
+            @if(Auth::user()->id=='1')
+              <button class="btn btn-primary"> VC Approved</button>
+              @endif
+            </td>
+            <td>
+            @if(Auth::user()->id=='2')
+              <button class="btn btn-primary"> Dean Approved</button>
+              @endif
             </td>
           </tr>
           @endforeach
