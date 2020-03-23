@@ -34,8 +34,10 @@ class CreateManuscriptsTable extends Migration
             $table->mediumText('file_letter')->nullable();
             $table->mediumText('file_invoice')->nullable();
             $table->date('date1');
-            $table->boolean('isapproved')->default(0);
+            $table->boolean('isapprovedvc')->default(0);
             $table->boolean('isapprovedean')->default(0);
+            $table->boolean('isapprovedgrant')->default(0);
+            $table->boolean('isapprovedhead')->default(0);
             $table->timestamps();
         });
     }

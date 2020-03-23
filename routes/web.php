@@ -57,7 +57,7 @@ Route::group(['middleware'=>['auth']],function(){
      Route::post('/savemanuscript','manuscriptController@store1');
      Route::get('/admin/manuscriptview', function () {
          Route::post('/savemanuscript','manuscriptController@store1');
-         $data=App\manuscript::where('isapproved',1)->get();
+         $data=App\manuscript::where('isapprovedvc',1)->get();
          // $data=App\manuscript::where('isapproved',0)->get();
           return view('admin.manuscriptview')->with('details',$data);
          
@@ -69,6 +69,7 @@ Route::group(['middleware'=>['auth']],function(){
      Route::get('/admin/manuscriptview','manuscriptController@grantadmin');
     // Route::get('/markAsapproved/{id}','manuscriptController@deanapprovedd');
     Route::get('/markAsapprovedd/{id}','manuscriptController@updateApprovedd');
+    Route::get('/markAsapproveddd/{id}','manuscriptController@updateApprovedd');
 });
 
 

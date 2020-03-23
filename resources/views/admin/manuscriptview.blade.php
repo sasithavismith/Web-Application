@@ -32,14 +32,18 @@
               <button class="btn btn-outline-info">Not Approved</button>
               @endif
             </td> -->
-            <!-- <td>
-              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
-            </td>  -->
+            <td>
+              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved   {{ Auth::user()->name }}</a>
+            </td> 
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>
             <td>
+            @if(Auth::user()->id=='1')
               <button class="btn btn-dark">Not Approved</button>
+              @endif
+            
+              
             </td>
           </tr>
           @endforeach
