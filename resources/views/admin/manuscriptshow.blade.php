@@ -102,14 +102,26 @@
                       <td>{{$manuscriptdetails->date1}}</td>
                     </tr>
                     <tr>
-                      <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</th>
+                      <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to Vc Approved</th>
                       <td> 
                         @if($manuscriptdetails->isapproved)
-                        <button class="btn btn-outline-success">Approved</button>
+                        <button class="btn btn-outline-success"> Vc Approved</button>
                         @else
                         <button class="btn btn-outline-info">Not Approved</button>
                         @endif
                       </td>
+                    </tr>
+                    <tr>
+                      @if(Auth::user()->id=='2')
+                      <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to Dean Approved</th>
+                      <td> 
+                        @if($manuscriptdetails->isapprovedean)
+                        <button class="btn btn-outline-success"> Dean Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+                      </td>
+                      @endif
                     </tr>
                   </thead>
                 </table>
