@@ -69,7 +69,10 @@ Route::group(['middleware'=>['auth']],function(){
      Route::get('/admin/manuscriptview','manuscriptController@grantadmin');
     // Route::get('/markAsapproved/{id}','manuscriptController@deanapprovedd');
     Route::get('/markAsapprovedd/{id}','manuscriptController@updateApprovedd');
-    Route::get('/markAsapproveddd/{id}','manuscriptController@updateApprovedd');
+   // Route::get('/markAsapproveddd/{id}','manuscriptController@updateApprovedd');
+   Route::get('/markAsapprovedformB','formBController@updateApproved');
+   Route::get('/markAsapprovedformB/{id}','formBController@updateApprovedd');
+   Route::get('/admin/formBview','formBController@grantadmin');
 });
 
 
@@ -94,5 +97,6 @@ Route::get('/formA', 'AdminController@store4');
 Route::get('/approve/manuscriptApprove','manuscriptController@updateApproved');
 
 Route::get('/approve/formB_Approve','manuscriptController@updateApprovedFormB');
+Route::get('/approve/formBApprove','formBController@updateApproved');
 
 

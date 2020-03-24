@@ -48,7 +48,7 @@
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
                  <a class="dropdown-item" href="#">Application 1</a>
                  <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="#">Form B</a>
+                 <a class="dropdown-item" href="{{url('/approve/formBApprove')}}">Form B</a>
                  <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication fee </a>
                  <a class="dropdown-item" href="#">Application 5</a>
                </div>

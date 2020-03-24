@@ -153,14 +153,14 @@ class manuscriptController extends Controller
 
         public function grantadmin(){
                   
-             if(Auth::user()->id=='1'){
-                $grantadmin=manuscript::where('isapprovedvc',0)->get();
+             if(Auth::user()->id=='4'){
+                $grantadmin=manuscript::where('isapprovedhead',0)->get();
                 
                      return view('admin.manuscriptview')->with('details',$grantadmin);
 
     }
         elseif (Auth::user()->id=='2') {
-    $grantadmin=manuscript::where('isapprovedvc',1)->get();
+    $grantadmin=manuscript::where('isapprovedhead',1)->get();
     
     return view('admin.manuscriptview')->with('details',$grantadmin);   
 }
@@ -168,7 +168,7 @@ elseif (Auth::user()->id=='3') {
     $grantadmin=manuscript::where('isapprovedean',1)->get();
     return view('admin.manuscriptview')->with('details',$grantadmin);   
 }
-elseif (Auth::user()->id=='4') {
+elseif (Auth::user()->id=='1') {
     $grantadmin=manuscript::where('isapprovedgrant',1)->get();
     return view('admin.manuscriptview')->with('details',$grantadmin);   
 }
