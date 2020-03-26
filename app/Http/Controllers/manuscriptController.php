@@ -84,6 +84,7 @@ class manuscriptController extends Controller
             //return redirect('/admin/manuscriptShow');
             return view('admin.manuscriptShow',compact('manuscriptdetails'));
         }
+        
         public function updateApproved( ){
            // $approveddetail=manuscript::find($request->isapproved);
            if(Auth::user()->id=='1'){
@@ -92,6 +93,7 @@ class manuscriptController extends Controller
             return view('admin.manuscriptApprove')->with('approved',$approveddetail);
            }
            elseif(Auth::user()->id=='2'){
+               
             $approveddetail=manuscript::where('isapprovedean',1)->get();
 
             return view('admin.manuscriptApprove')->with('approved',$approveddetail);
@@ -111,33 +113,62 @@ class manuscriptController extends Controller
            }
            
         }
+        public function grantadmin(){
+                  
+            if(Auth::user()->id=='4'){
+               $grantadmin=manuscript::where('isapprovedhead',0)->get();
+               
+               
+                    return view('admin.manuscriptview')->with('details',$grantadmin);
+
+   }
+       elseif (Auth::user()->id=='2') {
+   $grantadmin=manuscript::where('isapprovedhead',1)->get();
+  // $grantadmin=manuscript::where('isapprovedean',1)->get();
+   return view('admin.manuscriptview')->with('details',$grantadmin);   
+}
+elseif (Auth::user()->id=='3') {
+   $grantadmin=manuscript::where('isapprovedean',1)->get();
+   return view('admin.manuscriptview')->with('details',$grantadmin); 
+     
+}
+elseif (Auth::user()->id=='1') {
+   $grantadmin=manuscript::where('isapprovedgrant',1)->get();
+   return view('admin.manuscriptview')->with('details',$grantadmin);   
+}
+
+   // else{
+   //     $grantadmin=manuscript::where('isapprovedean',0)->get();
+   //                  return view('admin.manuscriptview')->with('details',$grantadmin);
+   // }
+       }
         public function updateApprovedd($id){
             if(Auth::user()->id=='1'){
             $manuscriptdetails=manuscript::find($id);
             $manuscriptdetails->isapprovedvc=1;
             $manuscriptdetails->save();
-           // return redirect()->back();
+            //return redirect()->back();
             return redirect('/admin/manuscriptview')->with('details',$manuscriptdetails);
             }
             elseif(Auth::user()->id=='2'){
                 $manuscriptdetails=manuscript::find($id);
                 $manuscriptdetails->isapprovedean=1;
                 $manuscriptdetails->save();
-            //    return redirect()->back();  
+              // return redirect()->back();  
                 return redirect('/admin/manuscriptview')->with('details',$manuscriptdetails);
             }
             elseif(Auth::user()->id=='3'){
                 $manuscriptdetails=manuscript::find($id);
                 $manuscriptdetails->isapprovedgrant=1;
                 $manuscriptdetails->save();
-            //    return redirect()->back();  
+              // return redirect()->back();  
                 return redirect('/admin/manuscriptview')->with('details',$manuscriptdetails);
             }
             elseif(Auth::user()->id=='4'){
                 $manuscriptdetails=manuscript::find($id);
                 $manuscriptdetails->isapprovedhead=1;
                 $manuscriptdetails->save();
-            //    return redirect()->back();  
+               //return redirect()->back();  
                 return redirect('/admin/manuscriptview')->with('details',$manuscriptdetails);
             }
         }
@@ -151,33 +182,7 @@ class manuscriptController extends Controller
 //     }
 // }
 
-        public function grantadmin(){
-                  
-             if(Auth::user()->id=='4'){
-                $grantadmin=manuscript::where('isapprovedhead',0)->get();
-                
-                     return view('admin.manuscriptview')->with('details',$grantadmin);
-
-    }
-        elseif (Auth::user()->id=='2') {
-    $grantadmin=manuscript::where('isapprovedhead',1)->get();
-    
-    return view('admin.manuscriptview')->with('details',$grantadmin);   
-}
-elseif (Auth::user()->id=='3') {
-    $grantadmin=manuscript::where('isapprovedean',1)->get();
-    return view('admin.manuscriptview')->with('details',$grantadmin);   
-}
-elseif (Auth::user()->id=='1') {
-    $grantadmin=manuscript::where('isapprovedgrant',1)->get();
-    return view('admin.manuscriptview')->with('details',$grantadmin);   
-}
-
-    // else{
-    //     $grantadmin=manuscript::where('isapprovedean',0)->get();
-    //                  return view('admin.manuscriptview')->with('details',$grantadmin);
-    // }
-        }
+       
         // public function updateApprovedean($id){
         //     $manuscriptdetails=manuscript::find($id);
         //     $manuscriptdetails->isapprovedean=1;

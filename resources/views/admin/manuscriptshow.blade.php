@@ -102,19 +102,67 @@
                       <td>{{$manuscriptdetails->date1}}</td>
                     </tr>
                     <!-- <tr>
-                      <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to Vc Approved</th>
-                      <td> 
-                        @if($manuscriptdetails->isapprovedvc)
-                        <button class="btn btn-outline-success"> Vc Approved</button>
+                     <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to {{ Auth::user()->name }} Approved</th>
+                    <td>
+                    @if($manuscriptdetails->isapprovehead)
+                        <button class="btn btn-outline-success"> Head Approved</button>
                         @else
                         <button class="btn btn-outline-info">Not Approved</button>
                         @endif
-
-
-                      </td>
-
-
+                    
+                    
+                    </td>
                     </tr> -->
+                    <tr>
+                      <th>
+                    @if(Auth::user()->id=='1')
+              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to VC Approved</a>
+          <td>
+          @if($manuscriptdetails->isapprovedvc)
+                        <button class="btn btn-outline-success"> vc Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+            
+            
+            @if(Auth::user()->id=='2')
+            <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> click to Dean Approved</a>
+            <td>
+          @if($manuscriptdetails->isapprovedean)
+                        <button class="btn btn-outline-success"> dean Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+              @if(Auth::user()->id=='3')
+              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to Grant Approved</a>
+              <td>
+          @if($manuscriptdetails->isapprovedgrant)
+                        <button class="btn btn-outline-success"> Grant Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+            
+            
+            @if(Auth::user()->id=='4')
+            <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> Click to Head of the department Approved</a>
+            <td>
+          @if($manuscriptdetails->isapprovedhead)
+                        <button class="btn btn-outline-success"> Head Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              
+              @endif
+
+                      </th>
+                    </tr> 
                     <!-- <tr>
                       @if(Auth::user()->id='2')
                       <th><a href="/markAsapprovedd/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to Dean Approved</th>
