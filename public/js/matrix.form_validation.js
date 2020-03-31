@@ -1,24 +1,5 @@
 
 $(document).ready(function(){
-
-	$("#new_pwd").click(function(){
-		var current_pwd = $("#current_pwd").val();
-		$.ajax({
-			type:'get',
-			url:'/admin/check-pwd',
-			data:{current_pwd:current_pwd},
-			success:function(resp){
-				//alert(resp);
-				if(resp=="false"){
-					$("#check_pwd").html("<font color='red'>Current Password is Incorrect</font>");
-				}else if(resp=="true"){
-					$("#check_pwd").html("<font color='green'>Current Password is Correct</font>");
-				}
-			},error:function(){
-				alert("Error");
-			}
-		});
-	});
 	
 	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 	
@@ -27,30 +8,91 @@ $(document).ready(function(){
 	// Form Validation
     $("#basic_validate").validate({
 		rules:{
-			required:{
+			name:{
 				required:true
 			},
-			email:{
+			designation:{
 				required:true,
-				email: true
+				designation: true
 			},
-			date:{
+			department:{
 				required:true,
-				date: true
+				department: true
 			},
-			url:{
+			faculty:{
 				required:true,
-				url: true
+				faculty: true
+			},
+			title:{
+				required:true,
+				title: true
+			},
+			first_author:{
+				required:true,
+				first_author: true
+			},
+			corresponding_author:{
+				required:true,
+				corresponding_author: true
+				},
+			other_author:{
+				required:true,
+				other_author: true
+			},
+			journal:{
+				required:true,
+				journal: true
+			},
+			volume_and_issue_number:{
+				required:true,
+				volume_and_issue_number: true
+			},
+			date_of_acceptance:{
+				required:true,
+				date_of_acceptance: true
+			},
+			issn:{
+				required:true,
+				issn: true
+			},
+			publisher:{
+				required:true,
+				publisher: true
+							},
+			publication_fee:{
+				required:true,
+				publication_fee: true
+				},
+			file_copy:{
+				required:true,
+				file_copy: true
+			},
+			file_evidence:{
+				required:true,
+				file_evidence: true
+			},
+			file_letter:{
+				required:true,
+				file_letter: true
+			},
+			file_invoice:{
+				required:true,
+				file_invoice: true
+			},
+			date1:{
+				required:true,
+				date1: true
+				
 			}
 		},
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.form-group').addClass('error');
+			$(element).parents('.control-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.form-group').removeClass('error');
-			$(element).parents('.form-group').addClass('success');
+			$(element).parents('.control-group').removeClass('error');
+			$(element).parents('.control-group').addClass('success');
 		}
 	});
 	
@@ -72,41 +114,36 @@ $(document).ready(function(){
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.form-group').addClass('error');
+			$(element).parents('.control-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.form-group').removeClass('error');
-			$(element).parents('.form-group').addClass('success');
+			$(element).parents('.control-group').removeClass('error');
+			$(element).parents('.control-group').addClass('success');
 		}
 	});
 	
 	$("#password_validate").validate({
 		rules:{
-			current_pwd:{
+			pwd:{
 				required: true,
 				minlength:6,
 				maxlength:20
 			},
-			new_pwd:{
-				required: true,
-				minlength:6,
-				maxlength:20
-			},
-			confirm_pwd:{
+			pwd2:{
 				required:true,
 				minlength:6,
 				maxlength:20,
-				equalTo:"#new_pwd"
+				equalTo:"#pwd"
 			}
 		},
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.form-group').addClass('error');
+			$(element).parents('.control-group').addClass('error');
 		},
 		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.form-group').removeClass('error');
-			$(element).parents('.form-group').addClass('success');
+			$(element).parents('.control-group').removeClass('error');
+			$(element).parents('.control-group').addClass('success');
 		}
 	});
 });
