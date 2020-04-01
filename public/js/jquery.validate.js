@@ -287,6 +287,12 @@
 			required: "This field is required.",
 			remote: "Please fix this field.",
 			email: "Please enter a valid email address.",
+			country:"This field is required.",
+			period:"Please enter only digits.",
+			tel:"Please enter only digits.",
+			titleb:"This field is required.",
+			event:"This field is required.",
+			full_name:"This field is required.",
 			url: "Please enter a valid URL.",
 			date: "Please enter a valid date.",
 			dateISO: "Please enter a valid date (ISO).",
@@ -780,6 +786,7 @@
 	
 		classRuleSettings: {
 			name:{required: true},
+			full_name:{required: true},
 			designation:{required: true},
 			department:{required: true},
 			faculty:{required: true},
@@ -807,7 +814,12 @@
 			number: {number: true},
 			numberDE: {numberDE: true},
 			digits: {digits: true},
-			creditcard: {creditcard: true}
+			creditcard: {creditcard: true},
+			country:{requird:true},
+			event:{required:true},
+			titleb:{required:true},
+			period:{digits:true},
+			tel:{digits:true}
 		},
 	
 		addClassRules: function(className, rules) {
@@ -977,6 +989,38 @@
 					return $.trim(value).length > 0;
 				}
 			},
+			name: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+			full_name: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
 			designation: function(value, element, param) {
 				// check if dependency is met
 				if ( !this.depend(param, element) )
@@ -1011,6 +1055,57 @@
 			},
 	
 			faculty: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+
+			country: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+
+			event: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+
+			titleb: function(value, element, param) {
 				// check if dependency is met
 				if ( !this.depend(param, element) )
 					return "dependency-mismatch";
@@ -1319,6 +1414,9 @@
 			date1: function(value, element) {
 				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
 			},
+			date: function(value, element) {
+				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+			},
 			date_of_acceptance: function(value, element) {
 				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
 			},
@@ -1341,6 +1439,12 @@
 			},
 			// http://docs.jquery.com/Plugins/Validation/Methods/digits
 			digits: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			tel: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			period: function(value, element) {
 				return this.optional(element) || /^\d+$/.test(value);
 			},
 	

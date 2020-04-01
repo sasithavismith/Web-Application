@@ -9,7 +9,12 @@ $(document).ready(function(){
     $("#basic_validate").validate({
 		rules:{
 			name:{
-				required:true
+				required:true,
+				name:true
+			},
+			full_name:{
+				required:true,
+				full_name:true
 			},
 			designation:{
 				required:true,
@@ -83,6 +88,37 @@ $(document).ready(function(){
 				required:true,
 				date1: true
 				
+			},
+			tel:{
+				required: true,
+				tel:true,
+				minlength:10,
+				maxlength:10
+			},
+			email:{
+				required:true,
+				email:true
+			},
+			country:{
+				required:true,
+				country:true
+			},
+			period:{
+				required:true,
+				period:true,
+				maxlength:10
+			},
+			title:{
+				required:true,
+				titleb:true
+			},
+			date:{
+				required:true,
+				date:true
+			},
+			event:{
+				required:true,
+				event:true
 			}
 		},
 		errorClass: "help-inline",

@@ -67,9 +67,20 @@
 			<div class="row">
 				<div class="col-md-6">
 					<p>Application for the Encouragement Allowance and Financial Assistance</p>
+					<p>Form A</p>
 				</div>
 				<div class="col-md-6">
 					<a class="start" href="/formA">Getting Start here</a>
+				</div>	
+			</div>
+			<hr class="my-4">
+			<div class="row">
+				<div class="col-md-6">
+					<p>	Declartion form for confirming attendance at the Overseas Conference\Symposium\Workshop</p>
+					<p>Form B</p>
+				</div>
+				<div class="col-md-6">
+					<a class="start" href="/formB">Getting Start here</a>
 				</div>	
 			</div>
 			<hr class="my-4">
