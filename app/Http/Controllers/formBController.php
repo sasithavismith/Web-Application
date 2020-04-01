@@ -22,7 +22,7 @@ class formBController extends Controller
         $formBdetails->event=$request->event;
         $formBdetails->country=$request->country;
         $formBdetails->period=$request->period;
-        $formBdetails->title=$request->title;
+        $formBdetails->titleb=$request->title;
  
         $formBdetails->save();
           $data=formB::all();
