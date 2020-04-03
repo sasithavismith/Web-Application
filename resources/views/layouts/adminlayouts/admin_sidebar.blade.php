@@ -66,6 +66,19 @@
                  <a class="dropdown-item" href="/admin/settings">Modify User</a>
                </div>
              </li>
+
+             <li class="dropdown">
+               <a class="dropdown-toggle" id="DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <i class="now-ui-icons design_bullet-list-67"></i>
+             <p>Mail</p>
+                 <p>
+                   <span class="d-lg-none d-md-block">Forms</span>
+                 </p>
+               </a>
+               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
+                 <a class="dropdown-item" href="/admin/mail">Sending the Mail</a>
+               </div>
+             </li>
          
          <li>
            <a href="{{ url('/logout') }}">
