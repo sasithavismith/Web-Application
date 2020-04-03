@@ -293,11 +293,30 @@
 			titleb:"This field is required.",
 			event:"This field is required.",
 			full_name:"This field is required.",
+			contact:"This field is required.",
+			abstract:"This field is required.",
+			date_abstract: "Please enter a valid date.",
+			Other_visit:"This field is required.",
+			registration:"Please enter only amount",
+			airticket:"Please enter only amount",
+			accommodation:"Please enter only amount",
+			internal:"Please enter only amount",
+			total_cost:"Please enter only amount",
+			Another_financial:"Please enter only amount",
+			year1: "Please enter a valid date.",
+			country1:"This field is required.",
+			amount1:"Please enter only amount",
+			year2: "Please enter a valid date.",
+			country2:"This field is required.",
+			amount2:"Please enter only amount",
+			year3: "Please enter a valid date.",
+			country3:"This field is required.",
+			amount3:"Please enter only amount",
 			url: "Please enter a valid URL.",
 			date: "Please enter a valid date.",
 			dateISO: "Please enter a valid date (ISO).",
 			number: "Please enter a valid number.",
-			digits: "Please enter only digits.",
+			digits: "Please enter only amount",
 			creditcard: "Please enter a valid credit card number.",
 			equalTo: "Please enter the same value again.",
 			accept: "Please enter a value with a valid extension.",
@@ -819,7 +838,26 @@
 			event:{required:true},
 			titleb:{required:true},
 			period:{digits:true},
-			tel:{digits:true}
+			tel:{digits:true},
+			contact:{required:true},
+			abstract:{required:true},
+			date_abstract:{date:true},
+			Other_visit:{digits:true},
+			registration:{digits:true},
+			airticket:{digits:true},
+			accommodation:{digits:true},
+			internal:{digits:true},
+			total_cost:{digits:true},
+			Another_financial:{digits:true},
+			year1:{date:true},
+			country1:{required:true},
+			amount1:{digits:true},
+			year2:{date:true},
+			country2:{required:true},
+			amount2:{digits:true},
+			year3:{date:true},
+			country3:{required:true},
+			amount3:{digits:true},
 		},
 	
 		addClassRules: function(className, rules) {
@@ -1309,6 +1347,92 @@
 					return $.trim(value).length > 0;
 				}
 			},
+			
+			country1: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+			
+		
+			country2: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+		
+			
+			country3: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+			contact: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+			abstract: function(value, element, param) {
+				// check if dependency is met
+				if ( !this.depend(param, element) )
+					return "dependency-mismatch";
+				switch( element.nodeName.toLowerCase() ) {
+				case 'select':
+					// could be an array for select-multiple or a string, both are fine this way
+					var val = $(element).val();
+					return val && val.length > 0;
+				case 'input':
+					if ( this.checkable(element) )
+						return this.getLength(value, element) > 0;
+				default:
+					return $.trim(value).length > 0;
+				}
+			},
+			
 	
 			
 			
@@ -1446,6 +1570,49 @@
 			},
 			period: function(value, element) {
 				return this.optional(element) || /^\d+$/.test(value);
+			},
+			date_abstract: function(value, element) {
+				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+			},
+			Other_visit: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			registration: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			airticket: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			accommodation: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			internal: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			total_cost: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			Another_financial: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			
+			amount1: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			amount3: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			amount2: function(value, element) {
+				return this.optional(element) || /^\d+$/.test(value);
+			},
+			year1: function(value, element) {
+				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+			},
+			year2: function(value, element) {
+				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+			},
+			year3: function(value, element) {
+				return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
 			},
 	
 			// http://docs.jquery.com/Plugins/Validation/Methods/creditcard

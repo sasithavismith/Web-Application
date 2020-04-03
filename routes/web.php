@@ -33,6 +33,7 @@ Route::get('/index','AdminController@show');
 
  Route::post('/manuscript', 'manuscriptController@save');
  Route::post('/formB', 'formBController@save');
+ Route::post('/formA', 'formAController@save');
  Route::post('/higher', 'Research_AllowanceController@save');
 
 Route::match(['get','post'],'/admin','AdminController@login');
@@ -44,7 +45,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/admin/settings','AdminController@settings');
     Route::get('/admin/check-pwd','AdminController@chkpwd');
     Route::match(['get','post'],'/admin/update-pwd','AdminController@updatePassword');
-    
+    Route::post('/saveformA','formAController@store');
     Route::post('/saveformB','formBController@store');
      Route::get('/admin/formBview', function () {
          Route::post('/saveformB','formBController@store');

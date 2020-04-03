@@ -116,6 +116,83 @@ $(document).ready(function(){
 				required:true,
 				date:true
 			},
+			contact:{
+				required:true,
+				contact:true
+			},
+			abstract:{
+				required:true,
+				abstract:true
+			},
+			date_abstract:{
+				required:true,
+				date_abstract:true
+			},
+			Other_visit:{
+				required:true,
+				Other_visit:true
+			},
+			registration:{
+				required:true,
+				registration:true
+			},
+			airticket:{
+				required:true,
+				airticket:true
+			},
+			accommodation:{
+				required:true,
+				accommodation:true
+			},
+			internal:{
+				required:true,
+				internal:true
+			},
+			total_cost:{
+				required:true,
+				total_cost:true
+			},
+			Another_financial:{
+				required:true,
+				Another_financial:true
+			},
+			year1:{
+				required:true,
+				year1:true
+			},
+			country1:{
+				required:true,
+				country1:true
+			},
+			amount1:{
+				required:true,
+				amount1:true
+			},
+			year2:{
+				required:true,
+				year2:true
+			},
+			country2:{
+				required:true,
+				country2:true
+			},
+			amount2:{
+				required:true,
+				amount2:true
+			},
+			year3:{
+				required:true,
+				year3:true
+			},
+			country3:{
+				required:true,
+				country3:true
+			},
+			amount3:{
+				required:true,
+				amount3:true
+			},
+			
 			event:{
 				required:true,
 				event:true
