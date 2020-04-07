@@ -124,6 +124,7 @@
       <div class="content mb-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-sm-8">
+            <br><br><br>
           @if(Session::has('flash_message_error'))
             <div class="alert alert-primary alert-block">
               <button type="button" class="close" data-dismiss="alert">x</button>

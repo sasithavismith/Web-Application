@@ -127,7 +127,7 @@ return view('admin.formBview')->with('details',$grantadmin);
   {
 
       $request->validate([
-      'full_name' => 'required|string|unique:form_b_s',
+      'full_name'=>'required|string',
       'designation' => 'required|string',
       'department' => 'required|string',
       'faculty'=> 'required|string|',
