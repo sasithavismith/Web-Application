@@ -124,6 +124,7 @@
       <div class="content mb-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-sm-8">
+          <br><br><br>
           @if(Session::has('flash_message_error'))
             <div class="alert alert-primary alert-block">
               <button type="button" class="close" data-dismiss="alert">x</button>
@@ -146,7 +147,7 @@
                 <div class="row justify-content-center">
                   <div class="col-md-12"> 
     
-              <form class="form-horizontal" method="post" action="{{ url('/email') }}" >
+              <form class="form-horizontal"  method="post" action="{{ url('/email') }}" name="basic_validate" id="basic_validate" novalidate="novalidate">
                 {{csrf_field()}}
                 <div class="form-group">
                   <label for="name" class="col-md-4 control-label">Subject</label>
@@ -155,7 +156,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">Email</label>
+                  <label for="name" class="col-md-4 control-label">To</label>
                   <div class="col-md-6">
                     <input type="email" name="email" class="form-control" >
                   </div>
@@ -164,10 +165,10 @@
                   <label for="name" class="col-md-4 control-label">Message</label>
                   <div class="col-md-6">
                   <a  class="simple-text logo-normal">
-     I am the {{ Auth::user()->name }}<br>
+                I am the {{ Auth::user()->name }}<br>
     
-       </a>
-                  <textarea class="form-control" name="message" type="email" rows="5" cols="30">
+                </a>
+                  <textarea class="form-control" name="message" type="text" rows="5" cols="30">
                   My Email is {{Auth::user()->email}}
                   </textarea>
        

@@ -86,7 +86,7 @@ public function store4(){
                 return redirect('/admin/settings')->with('flash_message_success','Password updated Successfully!');
 
             }else{
-                return redirect('/admin/settings')->with('flash_message_error','Password updated Uns uccessfully!');
+                return redirect('/admin/settings')->with('flash_message_error','Password updated Unsuccessfully!');
 
         }
     }
