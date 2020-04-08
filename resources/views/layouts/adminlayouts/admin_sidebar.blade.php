@@ -59,7 +59,7 @@
                  <i class="now-ui-icons design_bullet-list-67"></i>
              <p>Settings</p>
                  <p>
-                   <span class="d-lg-none d-md-block">Forms</span>
+                   <span class="d-lg-none d-md-block">Password Change</span>
                  </p>
                </a>
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
@@ -110,6 +110,6 @@
           </button>
           </div>
       </nav>
-      
+        <!--End Navbar -->
       
       
