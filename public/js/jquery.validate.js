@@ -265,6 +265,7 @@ $.extend($.validator, {
 	},
 
 	messages: {
+		unique:"The email has already been taken",
 		required: "This field is required.",
 		subject: "This field is required.",
 		message: "This field is required.",
@@ -762,6 +763,7 @@ $.extend($.validator, {
 	},
 
 	classRuleSettings: {
+		unique: {required:true},
 		required: {required: true},
 		subject: {required: true},
 		message: {required: true},

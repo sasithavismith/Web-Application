@@ -35,3 +35,6 @@ html{
 .carousel-caption{
     margin-top: 5px;
 }
+.has-error .form-control {
+    border-color: #a94442;
+}
