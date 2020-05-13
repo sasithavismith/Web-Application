@@ -25,10 +25,7 @@
         <div class="widget-content" >
           <div class="row-fluid">
             <div class="span9">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, vero. Rem, veritatis facilis recusandae repellendus animi modi suscipit maiores asperiores sint quia! Sint corrupti veniam aliquam ullam earum laboriosam fugiat!
-              </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad exercitationem inventore sequi veniam debitis quisquam, enim fuga earum cupiditate obcaecati facere suscipit aliquid est itaque natus quam ducimus optio cumque?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, voluptas hic sint, alias maiores autem assumenda pariatur dolore placeat, quisquam quos veritatis facere ullam architecto animi aut distinctio ut. Distinctio.</p>
+              
             </div>
             <div class="span3">
               <ul class="site-stats">

@@ -30,6 +30,37 @@ $(document).ready(function(){
 			required:{
 				required:true
 			},
+			full_name:{
+				required:true,
+			},
+			designation:{
+				required:true,
+			},
+			department:{
+				required:true,
+			},
+			faculty:{
+				required:true,
+			},
+			tel:{
+				required:true,
+			},
+			email:{
+				required:true,
+				unique:true
+			},
+			event:{
+				required:true,
+			},
+			country:{
+				required:true,
+			},
+			period:{
+				required:true,
+			},
+			title:{
+				required:true,
+			},
 			subject:{
 				required:true,
 				subject: true
@@ -40,7 +71,8 @@ $(document).ready(function(){
 				},
 			email:{
 				required:true,
-				email: true
+				email: true,
+				unique:true
 			},
 			date:{
 				required:true,
@@ -68,6 +100,7 @@ $(document).ready(function(){
 				required: true,
 				min:10
 			},
+			
 			max:{
 				required:true,
 				max:24

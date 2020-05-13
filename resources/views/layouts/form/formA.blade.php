@@ -51,12 +51,12 @@
                                 <div class="form-group">
                                         <label>1.1 Full Name:</label>
                                         <input type="text" name="Full_name" class="form-control" id="Full_name" value="{{old('Full_name')}}">
-                                        <span class="text-danger">{{ $errors->first('Full_name') }}</span>
+                                        <!-- <span class="text-danger">{{ $errors->first('Full_name') }}</span> -->
                                 </div>
                                 <div class="form-group">
                                         <label>1.2 Designation:</label>
                                         <input type="text" name="designation" class="form-control"  id="designation" value="{{old('designation')}}">
-                                        <span class="text-danger">{{ $errors->first('designation') }}</span> 
+                                       <!--  <span class="text-danger">{{ $errors->first('designation') }}</span>  -->
                                 </div>
                                 <div class="form-row">
                                         <div class="form group col md-6">
@@ -67,7 +67,7 @@
                                         <div class="form group col md-6">
                                                 <label>1.4 Faculty:</label>
                                                 <input type="text" name="faculty" class="form-control"  id="faculty" value="{{old('faculty')}}">
-                                        <span class="text-danger">{{ $errors->first('faculty') }}</span> 
+                                       <!--  <span class="text-danger">{{ $errors->first('faculty') }}</span>  -->
                                         </div> 
                                  </div>
                                 <div class="form-row">
