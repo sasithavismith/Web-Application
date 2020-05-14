@@ -1,48 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Laravel 5.7 JQuery Form Validation Example - ItSolutionStuff.com</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">	
-      <section class="header-section">
+  <div class="container">	
+    <section class="header-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="head">
               <img src="assets/img/logo.png" class="img-logo">
               <h4 class="logo-text">Sabaragamuwa University of Sri Lanka</h4>
-              <h4 class="logo-text-4">Belihuloya Sri Lanka</h4>
+              <h4 class="logo-text-4 text-monospace">Belihuloya Sri Lanka</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-    <div class="jumbotron">
-        <div class="row justify-content-center content-title">
-            <div class="col-md-10">
-                <h4>Application for Encouragement Allowance and Finacial Assistance to Attend Overseas International Conference\Symposium\Workshop</h4>
-                <hr class="my-4">
-                <p></p>
-                <hr class="my-4">
-                <div class="card">
-                 
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">
-                    @if ($message = Session::get('submit_success'))
-                      <div class="alert alert-success alert-block">
-                          <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>{{ $message }}</strong>
-                      </div>
-                      <br>
-                    @endif
+    <div class="row justify-content-center content-title">
+      <div class="col-md-10">
+        <div class="shadow p-3 mt-5 mb-5 bg-white rounded">
+          <div class="shadow-sm p-3 mb-5 bg-white rounded">
+         <h4 class="text-monospace">Declartion form for confirming attendance at the Overseas Conference\Symposium\Workshop</h4>
+          </div>
+             @if ($message = Session::get('submit_success'))
+                <div class="alert alert-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+                <br>
+            @endif
                     <form action="{{url('formA')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}       
                                 <div class="form-group">
@@ -51,12 +48,12 @@
                                 <div class="form-group">
                                         <label>1.1 Full Name:</label>
                                         <input type="text" name="Full_name" class="form-control" id="Full_name" value="{{old('Full_name')}}">
-                                        <!-- <span class="text-danger">{{ $errors->first('Full_name') }}</span> -->
+                                         <span class="text-danger">{{ $errors->first('Full_name') }}</span>
                                 </div>
                                 <div class="form-group">
                                         <label>1.2 Designation:</label>
                                         <input type="text" name="designation" class="form-control"  id="designation" value="{{old('designation')}}">
-                                       <!--  <span class="text-danger">{{ $errors->first('designation') }}</span>  -->
+                                        <span class="text-danger">{{ $errors->first('designation') }}</span> 
                                 </div>
                                 <div class="form-row">
                                         <div class="form group col md-6">
@@ -67,7 +64,7 @@
                                         <div class="form group col md-6">
                                                 <label>1.4 Faculty:</label>
                                                 <input type="text" name="faculty" class="form-control"  id="faculty" value="{{old('faculty')}}">
-                                       <!--  <span class="text-danger">{{ $errors->first('faculty') }}</span>  -->
+                                         <span class="text-danger">{{ $errors->first('faculty') }}</span> 
                                         </div> 
                                  </div>
                                 <div class="form-row">
@@ -229,32 +226,16 @@
                                                               
                                                       </form>
            
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                            </div>
-                          </div>
-                        <script>
-                              document.addEventListener('DOMContentLoaded', function(e) {
-                                  FormValidation.formValidation(
-                                      document.getElementById('demoForm'),
-                                      {
-                                          fields: {
-                                              ...
-                                          },
-                                          plugins: {
-                                              bootstrap: new FormValidation.plugins.Bootstrap(),
-                                              ...
-                                          },
-                                      }
-                                  );
-                              });
-                              </script>
-                            <!-- Optional JavaScript -->
-                            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>    
-                        <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
-                        <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script>
-                        </body>
-                        </html>
+                                                      </div>
+                </div>
+                </div>
+                </div>
+                </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
