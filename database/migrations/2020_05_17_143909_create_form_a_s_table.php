@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFormATable extends Migration
+class CreateFormASTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFormATable extends Migration
      */
     public function up()
     {
-        Schema::create('form__a', function (Blueprint $table) {
+        Schema::create('form_a_s', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Full_name');
             $table->string('designation');
@@ -43,6 +43,11 @@ class CreateFormATable extends Migration
             $table->string('Year_III');
             $table->string('Country_III');
             $table->string('Amount_received_III');
+            $table->boolean('isapprovedvc')->default(0);
+            $table->boolean('isapprovedean')->default(0);
+            $table->boolean('isapprovedgrant')->default(0);
+            $table->boolean('isapprovedhead')->default(0);
+
             $table->timestamps();
         });
     }
@@ -54,6 +59,6 @@ class CreateFormATable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form__a');
+        Schema::dropIfExists('form_a_s');
     }
 }

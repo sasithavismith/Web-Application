@@ -48,12 +48,12 @@
                                 <div class="form-group">
                                         <label>1.1 Full Name:</label>
                                         <input type="text" name="Full_name" class="form-control" id="Full_name" value="{{old('Full_name')}}">
-                                         <span class="text-danger">{{ $errors->first('Full_name') }}</span>
+                                        <span class="text-danger">{{ $errors->first('Full_name') }}</span> 
                                 </div>
                                 <div class="form-group">
                                         <label>1.2 Designation:</label>
                                         <input type="text" name="designation" class="form-control"  id="designation" value="{{old('designation')}}">
-                                        <span class="text-danger">{{ $errors->first('designation') }}</span> 
+                                         <span class="text-danger">{{ $errors->first('designation') }}</span>  
                                 </div>
                                 <div class="form-row">
                                         <div class="form group col md-6">
@@ -64,7 +64,7 @@
                                         <div class="form group col md-6">
                                                 <label>1.4 Faculty:</label>
                                                 <input type="text" name="faculty" class="form-control"  id="faculty" value="{{old('faculty')}}">
-                                         <span class="text-danger">{{ $errors->first('faculty') }}</span> 
+                                         <span class="text-danger">{{ $errors->first('faculty') }}</span>  
                                         </div> 
                                  </div>
                                 <div class="form-row">
@@ -206,7 +206,7 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                         <label>III. Country</label>
-                                                                  <input type="text" name="Country_II" class="form-control"  id="Country_II" value="{{old('Country_II')}}">
+                                                                  <input type="text" name="Country_III" class="form-control"  id="Country_II" value="{{old('Country_II')}}">
                                         <span class="text-danger">{{ $errors->first('Country_II') }}</span> 
                                                                 </div>
                                                                 <div class="col-md-4">
@@ -226,16 +226,17 @@
                                                               
                                                       </form>
            
-                                                      </div>
-                </div>
-                </div>
-                </div>
-                </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
-</html>
-
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                            </div>
+                          </div>
+                        
+                            <!-- Optional JavaScript -->
+                            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>    
+                        <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
+                        <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script>
+                        </body>
+                        </html>
