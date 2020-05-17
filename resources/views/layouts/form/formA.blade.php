@@ -1,48 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Laravel 5.7 JQuery Form Validation Example - ItSolutionStuff.com</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">	
-      <section class="header-section">
+  <div class="container">	
+    <section class="header-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="head">
               <img src="assets/img/logo.png" class="img-logo">
               <h4 class="logo-text">Sabaragamuwa University of Sri Lanka</h4>
-              <h4 class="logo-text-4">Belihuloya Sri Lanka</h4>
+              <h4 class="logo-text-4 text-monospace">Belihuloya Sri Lanka</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-    <div class="jumbotron">
-        <div class="row justify-content-center content-title">
-            <div class="col-md-10">
-                <h4>Application for Encouragement Allowance and Finacial Assistance to Attend Overseas International Conference\Symposium\Workshop</h4>
-                <hr class="my-4">
-                <p></p>
-                <hr class="my-4">
-                <div class="card">
-                 
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">
-                    @if ($message = Session::get('submit_success'))
-                      <div class="alert alert-success alert-block">
-                          <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>{{ $message }}</strong>
-                      </div>
-                      <br>
-                    @endif
+    <div class="row justify-content-center content-title">
+      <div class="col-md-10">
+        <div class="shadow p-3 mt-5 mb-5 bg-white rounded">
+          <div class="shadow-sm p-3 mb-5 bg-white rounded">
+         <h4 class="text-monospace">Declartion form for confirming attendance at the Overseas Conference\Symposium\Workshop</h4>
+          </div>
+             @if ($message = Session::get('submit_success'))
+                <div class="alert alert-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+                <br>
+            @endif
                     <form action="{{url('formA')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}       
                                 <div class="form-group">
