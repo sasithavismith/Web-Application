@@ -55,34 +55,33 @@ Route::group(['middleware'=>['auth']],function(){
           return view('admin.formBview')->with('details',$data);
          
      });
+    
      Route::get('/admin/formBShow/{id}','formBController@show');
 
      Route::post('/savemanuscript','manuscriptController@store1');
      Route::get('/admin/manuscriptview', function () {
          Route::post('/savemanuscript','manuscriptController@store1');
          $data=App\manuscript::all();
-         // $data=App\manuscript::where('isapproved',0)->get();
+         
           return view('admin.manuscriptview')->with('details',$data);
          
          
      });
      Route::get('/admin/manuscriptShow/{id}','manuscriptController@show'); 
      
-     Route::get('/markAsapproved','manuscriptController@updateApproved');
+     
      Route::get('/markAsapproved/{id}','manuscriptController@updateApprovedd');
      Route::get('/admin/manuscriptview','manuscriptController@grantadmin');
-    // Route::get('/markAsapproved/{id}','manuscriptController@deanapprovedd');
+  
     Route::get('/markAsapprovedd/{id}','manuscriptController@updateApprovedd');
-   // Route::get('/markAsapproveddd/{id}','manuscriptController@updateApprovedd');
+  
    Route::get('/markAsapprovedformB','formBController@updateApproved');
    Route::get('/markAsapprovedformB/{id}','formBController@updateApprovedd');
    Route::get('/admin/formBview','formBController@grantadmin');
 });
 
 
-/* Route::group(['as'=>'Vice Chancellor.','prefix'=>'Vice Chancellor','namespace'=>'Vice Chancellor','middleware'=>['auth','Vice Chancellor']],function(){
 
-}); */
  
 Auth::routes();
 
@@ -99,8 +98,6 @@ Route::get('/formB', 'AdminController@store3');
 Route::get('/formA', 'AdminController@store4');
 
 Route::get('/approve/manuscriptApprove','manuscriptController@updateApproved');
-
-Route::get('/approve/formB_Approve','manuscriptController@updateApprovedFormB');
 Route::get('/approve/formBApprove','formBController@updateApproved');
 
 

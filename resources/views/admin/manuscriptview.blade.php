@@ -24,7 +24,7 @@
           @foreach($details as $manuscriptdetails)
 
           <tr>
-            <td>{{$manuscriptdetails->id}}</td>
+          <td>{{$manuscriptdetails->id}}</td>
             <td>{{$manuscriptdetails->name}}</td>
             <!-- <td>
               @if($manuscriptdetails->isapproved)
