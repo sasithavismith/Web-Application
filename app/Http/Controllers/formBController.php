@@ -106,16 +106,16 @@ public function grantadmin(){
 
 }
 elseif (Auth::user()->id=='2') {
-$grantadmin=formB::where('isapprovedhead',1)->get();
+$grantadmin=formB::where('isapprovedean',0)->get();
 
 return view('admin.formBview')->with('details',$grantadmin);   
 }
 elseif (Auth::user()->id=='3') {
-$grantadmin=formB::where('isapprovedean',1)->get();
+$grantadmin=formB::where('isapprovedgrant',0)->get();
 return view('admin.formBview')->with('details',$grantadmin);   
 }
 elseif (Auth::user()->id=='1') {
-$grantadmin=formB::where('isapprovedgrant',1)->get();
+$grantadmin=formB::where('isapprovedvc',0)->get();
 return view('admin.formBview')->with('details',$grantadmin);   
 }
 
