@@ -39,7 +39,7 @@
             <td>
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
             </td>
-            @if(Auth::user()->id=='2')
+            <!-- @if(Auth::user()->id=='2')
               <td>
           @if($manuscriptdetails->isapprovedean)
                         <button class="btn btn-outline-success"> dean Approved</button>
@@ -69,14 +69,14 @@
                         @endif
           </td>
               @endif
-            <!-- <td>
+             <td>
             @if(Auth::user()->id=='1')
               <button class="btn btn-dark">Not Approved</button>
               @endif
             
               
             </td> -->
-          </tr>
+          </tr> 
           @endforeach
         </tbody>
       </table>
