@@ -123,17 +123,17 @@ class manuscriptController extends Controller
 
    }
        elseif (Auth::user()->id=='2') {
-   $grantadmin=manuscript::where('isapprovedean',0)->get();
+   $grantadmin=manuscript::where('isapprovedhead',1)->Where('isapprovedean',0)->get();
   // $grantadmin=manuscript::where('isapprovedean',1)->get();
    return view('admin.manuscriptview')->with('details',$grantadmin);   
 }
 elseif (Auth::user()->id=='3') {
-   $grantadmin=manuscript::where('isapprovedgrant',0)->get();
+   $grantadmin=manuscript::where('isapprovedean',1)->Where('isapprovedgrant',0)->get();
    return view('admin.manuscriptview')->with('details',$grantadmin); 
      
 }
 elseif (Auth::user()->id=='1') {
-   $grantadmin=manuscript::where('isapprovedvc',0)->get();
+   $grantadmin=manuscript::where('isapprovedgrant',1)->Where('isapprovedvc',0)->get();
    return view('admin.manuscriptview')->with('details',$grantadmin);   
 }
 
