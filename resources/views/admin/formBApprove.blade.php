@@ -26,32 +26,31 @@
           <tr>
             <td>{{$formBdetails->id}}</td>
             <td>{{$formBdetails->full_name}}</td>
-           
             <td>
             @if(Auth::user()->id=='1')
-              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary"> VC Approved</a>
+              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary">Achived details</a>
           
               @endif
             
             
             @if(Auth::user()->id=='2')
-            <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary"> Dean Approved</a>
+            <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary">Achived Details</a>
           
               @endif
               @if(Auth::user()->id=='3')
-              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary"> Grant Approved</a>
+              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary">Achived Details</a>
           
               @endif
             
             
             @if(Auth::user()->id=='4')
-            <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary"> Head of the department Approved</a>
+            <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-primary">Achived Details</a>
           
               
               @endif
 
             </td>
-            
+                      
             
           </tr>
           @endforeach

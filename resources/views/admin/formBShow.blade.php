@@ -49,16 +49,56 @@
                   <th>Email</th>
                   <td>{{$formBdetails->email}}</td>
                 </tr>
-                <!-- <tr>
-                  <th><a href="#" class="btn btn-outline-secondary">Mark As Approved</th>
-                  <td> 
-                    @if($formBdetails->isapproved)
-                    <button class="btn btn-outline-success">Approved</button>
-                    @else
-                    <button class="btn btn-outline-info">Not Approved</button>
-                    @endif
-                  </td>
-                </tr> -->
+                <tr>
+                      <th>
+                    @if(Auth::user()->id=='1')
+              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary">Click to VC Approved</a>
+          <td>
+          @if($formBdetails->isapprovedvc)
+                        <button class="btn btn-outline-success"> vc Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+            
+            
+            @if(Auth::user()->id=='2')
+            <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary"> click to Dean Approved</a>
+            <td>
+          @if($formBdetails->isapprovedean)
+                        <button class="btn btn-outline-success"> dean Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+              @if(Auth::user()->id=='3')
+              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary">Click to Grant Approved</a>
+              <td>
+          @if($formBdetails->isapprovedgrant)
+                        <button class="btn btn-outline-success"> Grant Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              @endif
+            
+            
+            @if(Auth::user()->id=='4')
+            <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary"> Click to Head of the department Approved</a>
+            <td>
+          @if($formBdetails->isapprovedhead)
+                        <button class="btn btn-outline-success"> Head Approved</button>
+                        @else
+                        <button class="btn btn-outline-info">Not Approved</button>
+                        @endif
+          </td>
+              
+              @endif
+
+                      </th>
+                    </tr> 
               </thead>
             </table>
           </div>

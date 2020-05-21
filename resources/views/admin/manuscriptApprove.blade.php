@@ -26,19 +26,7 @@
           <tr>
             <td>{{$manuscriptdetails->id}}</td>
             <td>{{$manuscriptdetails->name}}</td>
-            <!-- <td>
-              @if($manuscriptdetails->isapproved)
-              <button class="btn btn-outline-success">Approved</button>
-              @else
-              <button class="btn btn-outline-info">Not Approved</button>
-              @endif
-            </td>
-            <td>
-              <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Mark As Approved</a>
-            </td> -->
-            <!-- <td>
-              <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-outline-danger">SHOW</a>
-            </td> -->
+           
             <td>
             @if(Auth::user()->id=='1')
               <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="btn btn-primary">Achived details</a>

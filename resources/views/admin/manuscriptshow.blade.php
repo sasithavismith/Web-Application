@@ -101,18 +101,7 @@
                       <th>Date</th>
                       <td>{{$manuscriptdetails->date1}}</td>
                     </tr>
-                    <!-- <tr>
-                     <th><a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-outline-secondary">Click to {{ Auth::user()->name }} Approved</th>
-                    <td>
-                    @if($manuscriptdetails->isapprovehead)
-                        <button class="btn btn-outline-success"> Head Approved</button>
-                        @else
-                        <button class="btn btn-outline-info">Not Approved</button>
-                        @endif
-                    
-                    
-                    </td>
-                    </tr> -->
+                  
                     <tr>
                       <th>
                     @if(Auth::user()->id=='1')
