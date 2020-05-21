@@ -52,7 +52,7 @@
                 <tr>
                       <th>
                     @if(Auth::user()->id=='1')
-              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary">Click to VC Approved</a>
+              <a href="/markAsapprovedformB/{{$formBdetails->id}}" class="btn btn-primary">Click to VC Approved</a>
           <td>
           @if($formBdetails->isapprovedvc)
                         <button class="btn btn-outline-success"> vc Approved</button>
@@ -64,7 +64,7 @@
             
             
             @if(Auth::user()->id=='2')
-            <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary"> click to Dean Approved</a>
+            <a href="/markAsapprovedformB/{{$formBdetails->id}}" class="btn btn-primary"> click to Dean Approved</a>
             <td>
           @if($formBdetails->isapprovedean)
                         <button class="btn btn-outline-success"> dean Approved</button>
@@ -74,7 +74,7 @@
           </td>
               @endif
               @if(Auth::user()->id=='3')
-              <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary">Click to Grant Approved</a>
+              <a href="/markAsapprovedformB/{{$formBdetails->id}}" class="btn btn-primary">Click to Grant Approved</a>
               <td>
           @if($formBdetails->isapprovedgrant)
                         <button class="btn btn-outline-success"> Grant Approved</button>
@@ -86,7 +86,7 @@
             
             
             @if(Auth::user()->id=='4')
-            <a href="/markAsapproved/{{$formBdetails->id}}" class="btn btn-primary"> Click to Head of the department Approved</a>
+            <a href="/markAsapprovedformB/{{$formBdetails->id}}" class="btn btn-primary"> Click to Head of the department Approved</a>
             <td>
           @if($formBdetails->isapprovedhead)
                         <button class="btn btn-outline-success"> Head Approved</button>
