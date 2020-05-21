@@ -74,7 +74,7 @@ Route::group(['middleware'=>['auth']],function(){
    
   
 Route::get('/admin/formBShow/{id}','formBController@show');
-   Route::get('/markAsapproved/{id}','formBController@updateApprovedd');
+   Route::get('/markAsapprovedformB/{id}','formBController@updateApprovedd');
    Route::get('/admin/formBview','formBController@grantadmin');
 });
 
