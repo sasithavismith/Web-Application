@@ -69,32 +69,32 @@ class formBController extends Controller
  }
  public function updateApprovedd($id){
   if(Auth::user()->id=='1'){
-  $manuscriptdetails=formB::find($id);
-  $manuscriptdetails->isapprovedvc=1;
-  $manuscriptdetails->save();
+  $formBdetails=formB::find($id);
+  $formBdetails->isapprovedvc=1;
+  $formBdetails->save();
  // return redirect()->back();
-  return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+  return redirect('/admin/formBview')->with('details',$formBdetails);
   }
   elseif(Auth::user()->id=='2'){
-      $manuscriptdetails=formB::find($id);
-      $manuscriptdetails->isapprovedean=1;
-      $manuscriptdetails->save();
+      $formBdetails=formB::find($id);
+      $formBdetails->isapprovedean=1;
+      $formBdetails->save();
   //    return redirect()->back();  
-      return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+      return redirect('/admin/formBview')->with('details',$formBdetails);
   }
   elseif(Auth::user()->id=='3'){
-      $manuscriptdetails=formB::find($id);
-      $manuscriptdetails->isapprovedgrant=1;
-      $manuscriptdetails->save();
+      $formBdetails=formB::find($id);
+      $formBdetails->isapprovedgrant=1;
+      $formBdetails->save();
   //    return redirect()->back();  
-      return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+      return redirect('/admin/formBview')->with('details',$formBdetails);
   }
   elseif(Auth::user()->id=='4'){
-      $manuscriptdetails=formB::find($id);
-      $manuscriptdetails->isapprovedhead=1;
-      $manuscriptdetails->save();
+      $formBdetails=formB::find($id);
+      $formBdetails->isapprovedhead=1;
+      $formBdetails->save();
   //    return redirect()->back();  
-      return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+      return redirect('/admin/formBview')->with('details',$formBdetails);
   }
 }
 public function grantadmin(){
