@@ -21,7 +21,7 @@
             <div class="head">
               <img src="assets/img/logo.png" class="img-logo">
               <h4 class="logo-text">SABARAGAMUWA University of Sri Lanka</h4>
-              <h4 class="logo-text-4 text-monospace">Belihuloya Sri Lanka</h4>
+              <h4 class="logo-text-4 text-monospace">Belihuloya SRI Lanka</h4>
             </div>
           </div>
         </div>
