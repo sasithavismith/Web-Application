@@ -23,9 +23,9 @@
           <tbody>
             @foreach($details as $manuscriptdetails)
 
-             <tr>
+             <tr class="text-center">
                <td>{{$manuscriptdetails->id}}</td>
-               <td>{{$manuscriptdetails->full_name}}</td>
+               <td>{{$manuscriptdetails->name}}</td>
                <td>{{$manuscriptdetails->email}}</td>
                <td>
                 <a href="/admin/manuscriptShow/{{$manuscriptdetails->id}}" class="show" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="show">&#xe417;</i></a>
@@ -37,9 +37,8 @@
 <div class="clearfix">
           <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
           <ul class="pagination">
-              <li class="page-item disabled"><a href="#">Previous</a></li>
-              <li class="page-item"><a href="#" class="page-link">1</a></li>
-              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="/admin/manuscriptview" class="page-link">1</a></li>
+              <li class="page-item"><a href="/admin/manuscriptview" class="page-link">2</a></li>
               <li class="page-item active"><a href="#" class="page-link">3</a></li>
               <li class="page-item"><a href="#" class="page-link">4</a></li>
               <li class="page-item"><a href="#" class="page-link">5</a></li>

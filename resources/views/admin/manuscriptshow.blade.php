@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <div class="row justify-content-center content-title">
@@ -100,8 +104,9 @@
                 </tr>
               </tbody>
             </table>
-            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <a href="#confirmModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Approve</span></a> 
+            <a href="/admin/manuscriptview" class="btn btn-dark">Cancel</a>
+            <a href="#confirmModal" class="btn btn-success" data-toggle="modal"><i class="material-icons icon-save"></i> <span>Approve</span></a> 
+            
           </div>
           </div>
         </div>
@@ -116,60 +121,56 @@
               </div>
               <div class="modal-body">          
               <p>Are you sure you want to approve these?</p>
-              <p class="text-warning"><small>This action cannot be undone.</small></p>
+              <p class="text-danger"><small>This action cannot be undone.</small></p>
             </div>
             <div class="modal-footer">
-              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-              <tr>
-                <th>
-              @if(Auth::user()->id=='1')
-        <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to VC Approved</a>
-    <td>
-    @if($manuscriptdetails->isapprovedvc)
-                  <button class="btn btn-outline-success"> vc Approved</button>
+              <input type="button" class="btn btn-dark" data-dismiss="modal" value="Cancel">
+              <th>
+                @if(Auth::user()->id=='1')
+                  <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to Approved</a>
+              <td>
+              @if($manuscriptdetails->isapprovedvc)
+                  <button class="btn btn-success"> vc Approved</button>
                   @else
-                  <button class="btn btn-outline-info">Not Approved</button>
+                  <button class="btn btn-warning">Not Approved</button>
                   @endif
-    </td>
-        @endif
-      
-      
-      @if(Auth::user()->id=='2')
-      <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> click to Dean Approved</a>
-      <td>
-    @if($manuscriptdetails->isapprovedean)
-                  <button class="btn btn-outline-success"> dean Approved</button>
-                  @else
-                  <button class="btn btn-outline-info">Not Approved</button>
+              </td>
                   @endif
-    </td>
-        @endif
-        @if(Auth::user()->id=='3')
-        <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to Grant Approved</a>
-        <td>
-    @if($manuscriptdetails->isapprovedgrant)
-                  <button class="btn btn-outline-success"> Grant Approved</button>
-                  @else
-                  <button class="btn btn-outline-info">Not Approved</button>
+                
+                
+                @if(Auth::user()->id=='2')
+                <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> click to Approved</a>
+                <td>
+              @if($manuscriptdetails->isapprovedean)
+                            <button class="btn btn-success"> dean Approved</button>
+                            @else
+                            <button class="btn btn-warning">Not Approved</button>
+                            @endif
+              </td>
                   @endif
-    </td>
-        @endif
-      
-      
-      @if(Auth::user()->id=='4')
-      <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> Click to Head of the department Approved</a>
-      <td>
-    @if($manuscriptdetails->isapprovedhead)
-                  <button class="btn btn-outline-success"> Head Approved</button>
-                  @else
-                  <button class="btn btn-outline-info">Not Approved</button>
+                  @if(Auth::user()->id=='3')
+                  <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary">Click to Approved</a>
+                  <td>
+              @if($manuscriptdetails->isapprovedgrant)
+                            <button class="btn btn-success"> Grant Approved</button>
+                            @else
+                            <button class="btn btn-warning">Not Approved</button>
+                            @endif
+              </td>
                   @endif
-    </td>
-        
-        @endif
-
-                </th>
-              </tr> 
+                
+                
+                @if(Auth::user()->id=='4')
+                <a href="/markAsapproved/{{$manuscriptdetails->id}}" class="btn btn-primary"> Click to Approved</a>
+                <td>
+              @if($manuscriptdetails->isapprovedhead)
+                            <button class="btn btn-success"> Head Approved</button>
+                            @else
+                            <button class="btn btn-warning">Not Approved</button>
+                            @endif
+              </td>
+                  
+          @endif
             </div>
           </form>
         </div>
