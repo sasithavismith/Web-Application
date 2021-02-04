@@ -29,11 +29,11 @@
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
-            <a class="dropdown-item" href="#">Application 1</a>
-            <a class="dropdown-item" href="#">Application 2</a>
+            <a class="dropdown-item" href="{{url('/admin/formAview')}}">Form A</a>
             <a class="dropdown-item" href="{{url('/admin/formBview')}}">Form B</a>
-            <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Manuscript Publication fee</a>
-            <a class="dropdown-item" href="#">Application 5</a>
+            <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Manuscript Publication feer Form</a>
+            <a class="dropdown-item" href="">Research Allowance Form</a>
+            <a class="dropdown-item" href="#">Research Grant Form</a>
           </div>
         </li>
         
@@ -46,11 +46,11 @@
                  </p>
                </a>
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
-                 <a class="dropdown-item" href="#">Application 1</a>
-                 <a class="dropdown-item" href="#">Application 2</a>
+                 <a class="dropdown-item" href="{{url('/approve/formAApprove')}}">Form A</a>
                  <a class="dropdown-item" href="{{url('/approve/formBApprove')}}">Form B</a>
-                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication fee </a>
-                 <a class="dropdown-item" href="#">Application 5</a>
+                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication feer Form</a>
+                 <a class="dropdown-item" href="">Research Allowance Form</a>
+                 <a class="dropdown-item" href="#">Research Grant Form</a>
                </div>
              </li>
         

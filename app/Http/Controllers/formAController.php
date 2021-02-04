@@ -50,35 +50,35 @@ $formAdetails->Amount_received_III=$request->Amount_received_III;
          $data=formA::all();
   }
  /*  public function show(Request $request){
-    $formBdetails= formA::find($request->id);
+    $formAdetails= formA::find($request->id);
     //return $manuscriptdetails->name;
     //return redirect('/admin/manuscriptShow');
-    return view('admin.formBShow',compact('formBdetails'));
+    return view('admin.formAShow',compact('formAdetails'));
 }
 
 public function updateApproved( ){
   // $approveddetail=manuscript::find($request->isapproved);
   if(Auth::user()->id=='1'){
-   $approveddetail=formB::where('isapprovedvc',1)->get();
+   $approveddetail=formA::where('isapprovedvc',1)->get();
 
-   return view('admin.formBApprove')->with('approved',$approveddetail);
+   return view('admin.formAApprove')->with('approved',$approveddetail);
   }
   elseif(Auth::user()->id=='2'){
-   $approveddetail=formB::where('isapprovedean',1)->get();
+   $approveddetail=formA::where('isapprovedean',1)->get();
 
-   return view('admin.formBApprove')->with('approved',$approveddetail);
+   return view('admin.formAApprove')->with('approved',$approveddetail);
    
   }
   elseif(Auth::user()->id=='3'){
-   $approveddetail=formB::where('isapprovedgrant',1)->get();
+   $approveddetail=formA::where('isapprovedgrant',1)->get();
 
-   return view('admin.formBApprove')->with('approved',$approveddetail);
+   return view('admin.formAApprove')->with('approved',$approveddetail);
    
   }
   elseif(Auth::user()->id=='4'){
-   $approveddetail=formB::where('isapprovedhead',1)->get();
+   $approveddetail=formA::where('isapprovedhead',1)->get();
 
-   return view('admin.formBApprove')->with('approved',$approveddetail);
+   return view('admin.formAApprove')->with('approved',$approveddetail);
    
   }
 
@@ -88,54 +88,54 @@ public function updateApproved( ){
 }
 public function updateApprovedd($id){
 if(Auth::user()->id=='1'){
-$manuscriptdetails=formB::find($id);
+$manuscriptdetails=formA::find($id);
 $manuscriptdetails->isapprovedvc=1;
 $manuscriptdetails->save();
 // return redirect()->back();
-return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+return redirect('/admin/formAview')->with('details',$manuscriptdetails);
 }
 elseif(Auth::user()->id=='2'){
-    $manuscriptdetails=formB::find($id);
+    $manuscriptdetails=formA::find($id);
     $manuscriptdetails->isapprovedean=1;
     $manuscriptdetails->save();
 //    return redirect()->back();  
-    return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+    return redirect('/admin/formAview')->with('details',$manuscriptdetails);
 }
 elseif(Auth::user()->id=='3'){
-    $manuscriptdetails=formB::find($id);
+    $manuscriptdetails=formA::find($id);
     $manuscriptdetails->isapprovedgrant=1;
     $manuscriptdetails->save();
 //    return redirect()->back();  
-    return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+    return redirect('/admin/formAview')->with('details',$manuscriptdetails);
 }
 elseif(Auth::user()->id=='4'){
-    $manuscriptdetails=formB::find($id);
+    $manuscriptdetails=formA::find($id);
     $manuscriptdetails->isapprovedhead=1;
     $manuscriptdetails->save();
 //    return redirect()->back();  
-    return redirect('/admin/formBview')->with('details',$manuscriptdetails);
+    return redirect('/admin/formAview')->with('details',$manuscriptdetails);
 }
 }
 public function grantadmin(){
                 
 if(Auth::user()->id=='4'){
-   $grantadmin=formB::where('isapprovedhead',0)->get();
+   $grantadmin=formA::where('isapprovedhead',0)->get();
    
-        return view('admin.formBview')->with('details',$grantadmin);
+        return view('admin.formAview')->with('details',$grantadmin);
 
 }
 elseif (Auth::user()->id=='2') {
-$grantadmin=formB::where('isapprovedhead',1)->get();
+$grantadmin=formA::where('isapprovedhead',1)->get();
 
-return view('admin.formBview')->with('details',$grantadmin);   
+return view('admin.formAview')->with('details',$grantadmin);   
 }
 elseif (Auth::user()->id=='3') {
-$grantadmin=formB::where('isapprovedean',1)->get();
-return view('admin.formBview')->with('details',$grantadmin);   
+$grantadmin=formA::where('isapprovedean',1)->get();
+return view('admin.formAview')->with('details',$grantadmin);   
 }
 elseif (Auth::user()->id=='1') {
-$grantadmin=formB::where('isapprovedgrant',1)->get();
-return view('admin.formBview')->with('details',$grantadmin);   
+$grantadmin=formA::where('isapprovedgrant',1)->get();
+return view('admin.formAview')->with('details',$grantadmin);   
 }
 
 // else{
@@ -143,6 +143,100 @@ return view('admin.formBview')->with('details',$grantadmin);
 //                  return view('admin.manuscriptview')->with('details',$grantadmin);
 // }
 } */
+public function show(Request $request){
+    $formAdetails= formA::find($request->id);
+    //return $manuscriptdetails->name;
+    //return redirect('/admin/manuscriptShow');
+    return view('admin.formAShow',compact('formAdetails'));
+}
+
+public function updateApproved( ){
+  // $approveddetail=manuscript::find($request->isapproved);
+  if(Auth::user()->id=='1'){
+   $approveddetail=formA::where('isapprovedvc',1)->get();
+
+   return view('admin.formAApprove')->with('approved',$approveddetail);
+  }
+  elseif(Auth::user()->id=='2'){
+   $approveddetail=formA::where('isapprovedean',1)->get();
+
+   return view('admin.formAApprove')->with('approved',$approveddetail);
+   
+  }
+  elseif(Auth::user()->id=='3'){
+   $approveddetail=formA::where('isapprovedgrant',1)->get();
+
+   return view('admin.formAApprove')->with('approved',$approveddetail);
+   
+  }
+  elseif(Auth::user()->id=='4'){
+   $approveddetail=formA::where('isapprovedhead',1)->get();
+
+   return view('admin.formAApprove')->with('approved',$approveddetail);
+   
+  }
+
+
+  
+  
+}
+public function updateApprovedd($id){
+if(Auth::user()->id=='1'){
+$formAdetails=formA::find($id);
+$formAdetails->isapprovedvc=1;
+$formAdetails->save();
+// return redirect()->back();
+return redirect('/admin/formAview')->with('details',$formAdetails);
+}
+elseif(Auth::user()->id=='2'){
+    $formAdetails=formA::find($id);
+    $formAdetails->isapprovedean=1;
+    $formAdetails->save();
+//    return redirect()->back();  
+    return redirect('/admin/formAview')->with('details',$formAdetails);
+}
+elseif(Auth::user()->id=='3'){
+    $formAdetails=formA::find($id);
+    $formAdetails->isapprovedgrant=1;
+    $formAdetails->save();
+//    return redirect()->back();  
+    return redirect('/admin/formAview')->with('details',$formAdetails);
+}
+elseif(Auth::user()->id=='4'){
+    $formAdetails=formA::find($id);
+    $formAdetails->isapprovedhead=1;
+    $formAdetails->save();
+//    return redirect()->back();  
+    return redirect('/admin/formAview')->with('details',$formAdetails);
+}
+}
+public function grantadmin(){
+                
+if(Auth::user()->id=='4'){
+   $grantadmin=formA::where('isapprovedhead',0)->get();
+   
+        return view('admin.formAview')->with('details',$grantadmin);
+
+}
+elseif (Auth::user()->id=='2') {
+$grantadmin=formA::where('isapprovedhead',1)->Where('isapprovedean',0)->get();
+
+return view('admin.formAview')->with('details',$grantadmin);   
+}
+elseif (Auth::user()->id=='3') {
+$grantadmin=formA::where('isapprovedean',1)->Where('isapprovedgrant',0)->get();
+return view('admin.formAview')->with('details',$grantadmin);   
+}
+elseif (Auth::user()->id=='1') {
+$grantadmin=formA::where('isapprovedgrant',1)->Where('isapprovedvc',0)->get();
+return view('admin.formAview')->with('details',$grantadmin);   
+}
+
+// else{
+//     $grantadmin=manuscript::where('isapprovedean',0)->get();
+//                  return view('admin.manuscriptview')->with('details',$grantadmin);
+// }
+}
 public function save(Request $request)
 {
 
@@ -153,7 +247,7 @@ public function save(Request $request)
     'department'=>'required|string',
     'faculty'=>'required|string',
     'tel'=>'required|string',
-    'email'=>'required|string',
+    'email'=>'required|unique:form_a_s',
     'event_name'=>'required|string',
     'Contact_detail'=>'required|string',
     'country'=>'required|string',
