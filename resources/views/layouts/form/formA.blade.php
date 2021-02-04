@@ -220,23 +220,23 @@
                                   </form>
                                   <!-- Modal -->
                                   <div class="modal fade" id="cancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                                          <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                              <div class="modal-body">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                                <h6 class="mt-4 text-danger text-center">
-                                                  Are you sure you want to exit?
-                                                </h6>
-                                                <div class="row justify-content-end mt-5">
-                                                  <div class="col-md-6">
-                                                    <a href="/"> <button type="button" class="btn btn-danger pl-4 pr-4">Yes</button></a>
-                                                <button type="button" class="btn btn-warning text-light pl-4 pr-4"  data-dismiss="modal">No</button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-body">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+                                          <h6 class="mt-4 text-danger text-center">
+                                          Are you sure you want to exit?
+                                          </h6>
+                                          <div class="row justify-content-end mt-5">
+                                          <div class="col-md-6">
+                                             <a href="/"> <button type="button" class="btn btn-danger pl-4 pr-4">Yes</button></a>
+                                          <button type="button" class="btn btn-warning text-light pl-4 pr-4"  data-dismiss="modal">No</button>
                                           </div>
-                                        </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    </div>
+                                 </div>
                                </div>
                             </div>
                          </div>
