@@ -35,7 +35,7 @@
           </tbody>
       </table>
 <div class="clearfix">
-          <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+          <div class="hint-text">Showing <b>1</b> out of <b>5</b> entries</div>
           <ul class="pagination">
               <li class="page-item active"><a href="/admin/manuscriptview" class="page-link">1</a></li>
               <li class="page-item"><a href="/admin/manuscriptview" class="page-link">2</a></li>

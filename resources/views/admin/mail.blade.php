@@ -50,12 +50,12 @@
                  </p>
                </a>
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
-                 <a class="dropdown-item" href="#">Application 1</a>
-                 <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="#">Application 3</a>
-                 <a class="dropdown-item" href="#">Application 4</a>
-                 <a class="dropdown-item" href="#">Application 5</a>
-               </div>
+                <a class="dropdown-item" href="{{url('/admin/formAview')}}">Form A</a>
+                <a class="dropdown-item" href="{{url('/admin/formBview')}}">Form B</a>
+                <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Manuscript Publication feer Form</a>
+                <a class="dropdown-item" href="">Research Allowance Form</a>
+                <a class="dropdown-item" href="#">Research Grant Form</a>
+              </div>
              </li>
 
               <li class="dropdown">
@@ -67,11 +67,11 @@
                  </p>
                </a>
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
-                 <a class="dropdown-item" href="#">Application 1</a>
-                 <a class="dropdown-item" href="#">Application 2</a>
-                 <a class="dropdown-item" href="{{url('/admin/formBview')}}">Application 3</a>
-                 <a class="dropdown-item" href="{{url('/admin/manuscriptview')}}">Application 4</a>
-                 <a class="dropdown-item" href="#">Application 5</a>
+                 <a class="dropdown-item" href="{{url('/approve/formAApprove')}}">Form A</a>
+                 <a class="dropdown-item" href="{{url('/approve/formBApprove')}}">Form B</a>
+                 <a class="dropdown-item" href="{{url('/approve/manuscriptApprove')}}">Manuscript Publication feer Form</a>
+                 <a class="dropdown-item" href="">Research Allowance Form</a>
+                 <a class="dropdown-item" href="#">Research Grant Form</a>
                </div>
              </li>
         
@@ -87,7 +87,18 @@
                  <a class="dropdown-item" href="/admin/settings">Modify User</a>
                </div>
              </li>
-         
+             <li class="dropdown">
+               <a class="dropdown-toggle" id="DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <i class="now-ui-icons design_bullet-list-67"></i>
+             <p>Mail</p>
+                 <p>
+                   <span class="d-lg-none d-md-block">Forms</span>
+                 </p>
+               </a>
+               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownMenuLink">
+                 <a class="dropdown-item" href="/admin/mail">Sending the Mail</a>
+               </div>
+             </li>
          <li>
            <a href="{{ url('/logout') }}">
              <i class="now-ui-icons users_single-02"></i>
@@ -149,21 +160,29 @@
     
               <form class="form-horizontal"  method="post" action="{{ url('/email') }}" name="basic_validate" id="basic_validate" novalidate="novalidate">
                 {{csrf_field()}}
+                <div class="row">
+                <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">Subject</label>
-                  <div class="col-md-6">
+               
+                  <label for="name" class="control-label">Subject</label>
+                 
                     <input id="subject" type="subject" name="subject" class="form-control" >
                   </div>
                 </div>
+                <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">To</label>
-                  <div class="col-md-6">
+               
+                  <label for="name" class="control-label">To</label>
+                 
                     <input type="email" name="email" class="form-control" >
                   </div>
                 </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">Message</label>
-                  <div class="col-md-6">
+                  <label for="name" class="control-label">Message</label>
+                  <div class="">
                   <a  class="simple-text logo-normal">
                 I am the {{ Auth::user()->name }}<br>
     
@@ -173,6 +192,8 @@
                   </textarea>
        
                   </div>
+                </div>
+                </div>
                 </div>
                 <div class="form-actions">
                   <input type="submit" value="Send Email" class="btn btn-success">
