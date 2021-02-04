@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Matrix Admin</title>
+<title>Research Grant Sabaragamuwa University of Sri Lanka</title>
 <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
@@ -160,24 +160,30 @@
     
               <form class="form-horizontal" method="post" action="{{ url('/admin/update-pwd') }}" name="password_validate" id="password_validate" novalidate="novalidate">
                 {{csrf_field()}}
+                <div class="row">
+                <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">Current Password</label>
-                  <div class="col-md-6">
+                 
+                  <label for="name" class="control-label">Current Password</label>
+                
                     <input type="password" name="current_pwd" class="form-control" id="current_pwd" />
                     <span id="check_pwd"></span>
                   </div>
                 </div>
+                <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">New Password</label>
-                  <div class="col-md-6">
+                  <label for="name" class="control-label">New Password</label>
+                 
                     <input type="password" name="new_pwd" class="form-control" id="new_pwd" />
                   </div>
                 </div>
+                <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="col-md-4 control-label">Confirm password</label>
-                  <div class="col-md-6">
+                  <label for="name" class="control-label">Confirm password</label>
+                 
                     <input type="password" name="confirm_pwd" class="form-control" id="confirm_pwd" />
                   </div>
+                </div>
                 </div>
                 <div class="form-actions">
                   <input type="submit" value="Update" class="btn btn-success">
