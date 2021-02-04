@@ -26,11 +26,11 @@
                       </div>
                    </div>
                 </section>
-                <div class="row justify-content-center content-title">
-                   <div class="col-md-10">
-                      <div class="shadow p-3 mt-5 mb-5 bg-white rounded">
-                         <div class="shadow-sm p-3 mb-5 bg-white rounded">
-                            <h4 class="text-monospace font-weight-bold">Declartion Form for confirming attendance at the Overseas Conference\Symposium\Workshop</h4>
+                <div class="row justify-content-center content-title overflow-hidden">
+                   <div class="col-md-10 col-12">
+                      <div class="shadow p-md-3 p-2 mt-5 mb-5 bg-white rounded shadow-form">
+                         <div class="shadow-sm p-3 mb-5 bg-white rounded shadow-head">
+                            <h4 class="text-monospace font-weight-bold">Declartion Form for confirming attendance at the Overseas Conference\ Symposium\ Workshop</h4>
                          </div>
                          @if ($message = Session::get('submit_success'))
                          <div class="alert alert-success alert-block">

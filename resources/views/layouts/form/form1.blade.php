@@ -8,40 +8,36 @@
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
-     <div class="application-form">
-     <div class="container">
+      <div class="application-form">
+      <div class="container">
       <section class="header-section">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="head">
                      <img src="assets/img/logo.png" class="img-logo">
-                     <h4 class="logo-text">Sabaragamuwa University of Sri Lanka</h4>
-                     <h4 class="logo-text-4">Belihuloya Sri Lanka</h4>
+                     <h4 class="logo-text">SABARAGAMUWA University of Sri Lanka</h4>
+                     <h4 class="logo-text-4 text-monospace">Belihuloya SRI Lanka</h4>
                   </div>
                </div>
             </div>
          </div>
       </section>
-      <div class="jumbotron">
       <div class="row justify-content-center content-title">
-         <div class="col-md-10">
-            <h4>APPLICATION FOR A RESEARCH GRANT</h4>
-            <p>(Please refer to the Guidelines for a Applicants - Grants for a Scientific Research)</p>
-            <hr class="my-4">
-            <p></p>
-            <hr class="my-4">
-            <div class="card">
-               <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">
-                     @if ($message = Session::get('submit_success'))
-                  <div class="alert alert-success alert-block">
-                     <button type="button" class="close" data-dismiss="alert">×</button>
-                     <strong>{{ $message }}</strong>
-                  </div>
-                  <br>
-                  @endif
+         <div class="col-md-11">
+            <div class="shadow p-3 mt-5 mb-5 bg-white rounded">
+               <div class="shadow-sm p-3 mb-5 bg-white rounded shadow-head">
+                  <h4 class="text-monospace font-weight-bold">APPLICATION FOR A RESEARCH GRANT</h4>
+                  <p>(Please refer to the Guidelines for a Applicants - Grants for a Scientific Research)</p>
+               </div>
+               @if ($message = Session::get('submit_success'))
+               <div class="alert alert-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                  <strong>{{ $message }}</strong>
+               </div>
+               <br>
+               @endif
+               <div class="form">
                   <form>
                      <div class="form-group">
                         <div class="row">
@@ -434,43 +430,42 @@
                                  Description of work to be performed<br><br>
                                  </label>
                               </div>
-                               <div class="row justify-content-between">
-                               <div class="col-md-2 mt-4">
-                              <input type="button" class="btn btn-cancel font-weight-bold" value="Cancel" data-toggle="modal" data-target="#cancel"> 
-                           </div>
-                              <div class="col-md-4 mt-4">
-                                 <input type="submit" class="btn btn-submit font-weight-bold" value="Submit"> 
+                              <div class="row justify-content-between">
+                                 <div class="col-md-2 mt-4">
+                                    <input type="button" class="btn btn-cancel font-weight-bold" value="Cancel" data-toggle="modal" data-target="#cancel"> 
+                                 </div>
+                                 <div class="col-md-4 mt-4">
+                                    <input type="submit" class="btn btn-submit font-weight-bold" value="Submit"> 
+                                 </div>
                               </div>
                            </div>
-                           </div>
-                        </form>
-                         <!-- Modal -->
-                         <div class="modal fade" id="cancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                              <div class="modal-content">
-                                <div class="modal-body">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                  <h6 class="mt-4 text-danger text-center">
-                                    Are you sure you want to exit?
-                                  </h6>
-                                  <div class="row justify-content-end mt-5">
-                                    <div class="col-md-6">
-                                      <a href="/"> <button type="button" class="btn btn-danger pl-4 pr-4">Yes</button></a>
-                                  <button type="button" class="btn btn-warning text-light pl-4 pr-4"  data-dismiss="modal">No</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
+                  </form>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="cancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                  <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+                  <h6 class="mt-4 text-danger text-center">
+                  Are you sure you want to exit?
+                  </h6>
+                  <div class="row justify-content-end mt-5">
+                  <div class="col-md-6">
+                  <a href="/"> <button type="button" class="btn btn-danger pl-4 pr-4">Yes</button></a>
+                  <button type="button" class="btn btn-warning text-light pl-4 pr-4"  data-dismiss="modal">No</button>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-     </div>
-     <!-- Optional JavaScript -->
+      <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
