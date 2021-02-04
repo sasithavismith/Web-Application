@@ -229,8 +229,8 @@
                                           </h6>
                                           <div class="row justify-content-end mt-5">
                                           <div class="col-md-6">
-                                             <a href="/"> <button type="button" class="btn btn-danger pl-4 pr-4">Yes</button></a>
-                                          <button type="button" class="btn btn-warning text-light pl-4 pr-4"  data-dismiss="modal">No</button>
+                                             <a href="/"> <button type="button" class="btn btn-danger btn-yes pl-4 pr-4">Yes</button></a>
+                                          <button type="button" class="btn btn-warning text-light pl-4 pr-4 btn-no"  data-dismiss="modal">No</button>
                                           </div>
                                           </div>
                                        </div>
