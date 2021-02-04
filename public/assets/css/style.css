@@ -206,6 +206,38 @@ body
     
 }
 
+/* form style */
+
+.btn-submit{
+    border-radius: 15px;
+    color: white;
+    background: #520103;
+    padding: 8px 80px 8px 80px;
+}
+.btn-submit:hover{
+    background: white;
+    color: #520103;
+    border: 2px solid #520103;
+    transform: scale(1.02);
+}
+.btn-cancel{
+    border-radius: 15px;
+    color: white;
+    background: #D4AF37;
+    border: 2px solid #D4AF37 !important;
+    padding: 8px 80px 8px 80px;
+}
+.btn-cancel:hover{
+    background: white;
+    transform: scale(1.02);
+    border: 2px solid #D4AF37 !important;
+    color: #D4AF37;
+}
+.application-form 
+input{
+    border-radius: 8px !important;
+    border: 1px solid #520103;
+}
 
 
 
