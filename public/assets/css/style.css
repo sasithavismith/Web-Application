@@ -171,12 +171,22 @@ body
 {
 	color: #520103;
 }
-
+.shadow-head:hover h4{
+    font-size: 28px !important;
+    color: #b49019 ;
+}
+.shadow-head:hover p{
+    font-size: 18px !important;
+    color: #b49019 ;
+    font-weight: 600;
+}
 .application a:hover
 {
     text-decoration: none;
 }
-
+form:hover{
+    font-size: 18px !important;
+}
 #about-us
 {
 	position: relative;
