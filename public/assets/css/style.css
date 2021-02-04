@@ -180,9 +180,31 @@ body
     color: #b49019 ;
     font-weight: 600;
 }
+.form-details a{
+text-decoration: none;
+}
+.form-details a:hover{
+   font-weight: bold;
+   color: rgb(218, 35, 35);
+    }
+.form-details p:hover{
+    cursor: pointer;
+    color: #ecb709;
+}
 .application a:hover
 {
     text-decoration: none;
+}
+.btn-search{
+    background: white;
+    color: #b49019;
+}
+.btn-search:hover{
+    background: #b49019;
+    color: white;
+}
+.navbar-toggler{
+    background: white;
 }
 form:hover{
     font-size: 18px !important;
@@ -215,6 +237,15 @@ form:hover{
     font-size: 18px;
     
 }
+.btn-login:hover{
+    color:  rgb(46, 175, 235) !important;
+    background: white !important;
+    border: 2px solid rgb(46, 175, 235) !important;
+}
+.btn-back:hover{
+    color:  rgb(245, 245, 19) !important;
+    background: white !important;
+    border: 2px solid rgb(245, 245, 19) !important;
 
 /* form style */
 

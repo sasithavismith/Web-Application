@@ -21,16 +21,41 @@
                </div>
             </div>
          </section>
+         <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid mt-4 mb-4">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand text-light" href="/">HOME</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="/about-us">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="/admin">FOR ADMIN</a>
+                  </li>
+                </ul>
+               </div>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-search ml-sm-4" type="submit">Search</button>
+                </form>
+            </div>
+          </nav>
        
       </div>
-      <section id="content">
-         <div class="container">
-            <div class="jumbotron">
-               <div class="application">
-                  <h3 class="content-title font-weight-bold">Research Application</h3>
-                  <hr class="my-4">
-                  <p>The Sabaragamuwa University invites applications for research grants from all the academic staff members (Permanent carder). Applications for research grants are accepted throughout the year.</p>
-                  <hr class="my-4">
+
+      <div class="row justify-content-center content-title overflow-hidden">
+         <div class="col-md-10 col-lg-8">
+            <div class="shadow p-md-3 p-2 mt-5 mb-5 bg-white rounded shadow-form">
+               <div class="shadow-sm p-3 mb-5 bg-white rounded shadow-head">
+                  <h4 class="text-monospace font-weight-bold">
+                     Research Application
+                  </h4>
+                  <p class="font-weight-bold shadow-head">The Sabaragamuwa University invites applications for research grants from all the academic staff members (Permanent carder). Applications for research grants are accepted throughout the year.</p>
+               </div>
+               <div class="p-5 form-details">
                   <div class="row">
                      <div class="col-md-6">
                         <p class="font-weight-bold">Application for the Encouragement Allowance and Financial Assistance</p>
@@ -80,7 +105,10 @@
                </div>
             </div>
          </div>
-      </section>
+      </div>
+
+    
+
       <section id="Services">
          <div class="container">
          </div>
