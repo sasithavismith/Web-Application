@@ -206,9 +206,6 @@ text-decoration: none;
 .navbar-toggler{
     background: white;
 }
-form:hover{
-    font-size: 18px !important;
-}
 #about-us
 {
 	position: relative;
@@ -246,7 +243,17 @@ form:hover{
     color:  rgb(245, 245, 19) !important;
     background: white !important;
     border: 2px solid rgb(245, 245, 19) !important;
-
+}
+.btn-no:hover{
+    color:  rgb(245, 245, 19) !important;
+    background: white !important;
+    border: 2px solid rgb(245, 245, 19) !important;
+}
+.btn-yes:hover{
+    color:  rgb(177, 35, 35) !important;
+    background: white !important;
+    border: 2px solid rgb(177, 35, 35) !important;
+}
 /* form style */
 
 .btn-submit{
