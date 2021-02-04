@@ -47,15 +47,24 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/email','MailController@sendemail');
     Route::get('/admin/check-pwd','AdminController@chkpwd');
     Route::match(['get','post'],'/admin/update-pwd','AdminController@updatePassword');
+
     Route::post('/saveformA','formAController@store');
+    Route::get('/admin/formAview', function () {
+        Route::post('/saveformA','formAController@store');
+         $data=App\formA::all();
+         return view('admin.formAview')->with('details',$data);    
+    });
+    Route::get('/admin/formAShow/{id}','formAController@show');
+    Route::get('/admin/formAShow/{id}','formAController@show');
+   Route::get('/markAsapprovedformA/{id}','formAController@updateApprovedd');
+   Route::get('/admin/formAview','formAController@grantadmin');
+
     Route::post('/saveformB','formBController@store');
-     Route::get('/admin/formBview', function () {
+    Route::get('/admin/formBview', function () {
          Route::post('/saveformB','formBController@store');
           $data=App\formB::all();
-          return view('admin.formBview')->with('details',$data);
-         
+          return view('admin.formBview')->with('details',$data);    
      });
-    
      Route::get('/admin/formBShow/{id}','formBController@show');
 
      Route::post('/savemanuscript','manuscriptController@store1');
@@ -80,6 +89,9 @@ Route::get('/admin/formBShow/{id}','formBController@show');
 
 
 
+
+
+
  
 Auth::routes();
 
@@ -97,5 +109,6 @@ Route::get('/formA', 'AdminController@store4');
 
 Route::get('/approve/manuscriptApprove','manuscriptController@updateApproved');
 Route::get('/approve/formBApprove','formBController@updateApproved');
+Route::get('/approve/formAApprove','formAController@updateApproved');
 
 
