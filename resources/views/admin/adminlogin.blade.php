@@ -18,11 +18,95 @@
       <link href="../assets/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
       <!-- CSS Just for demo purpose, don't include it in your project -->
       <link href="../assets/demo/demo.css" rel="stylesheet" />
+      <style>
+          .anim span{
+                display: inline-block;
+                height: 75px;
+                width: 75px;
+                margin: -280px 40px 54px  -34px;
+                background:url("http://premiumcoding.com/CSSTricks/fallingLeaves/leaf.png");
+                animation: anim 12s infinite  linear;
+            }
+            .anim span:nth-child(7h) {
+                animation-delay: 2.5s;
+            }
+            .anim span:nth-child(7n-1) {
+                animation-delay: 1.0s;
+            }
+            .anim span:nth-child(7n-2) {
+                animation-delay: 3.5s;
+            }
+            .anim span:nth-child(7n-3) {
+                animation-delay: 5.0s;
+            }
+            .anim span:nth-child(7n-4) {
+                animation-delay: 1.5s;
+            }
+            .anim span:nth-child(7n-5) {
+                animation-delay: 7.0s;
+            }
+            .anim span:nth-child(7n-6) {
+                animation-delay: 9.5s;
+            }
+
+            @keyframes anim{
+                0% {
+                    width: 75px;
+                    height: 75px;
+                    opacity: 1;                    
+                    transform: translate(0, 0px) rotateZ(0deg);
+                }
+                75% {
+                    width: 75px;
+                    height: 75px;
+                    opacity: 1;
+                    transform: translate(100px, 900px) rotateZ(270deg); 
+                }
+                100% {
+                    width: 75px;
+                    height: 75px;
+                    opacity: 0;                   
+                    transform: translate(150px, 900px) rotateZ(360deg);
+                }
+            }
+      </style>
    <body class="bg-admin">
-      <div class="container">
+      <div class="container-fluid overflow-hidden">
          <div class="content mb-5 mt-5">
             <div class="row justify-content-center">
-               <div class="col-md-8">
+               <div class="col-md-3">
+                  <div class="anim">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                 </div>
+               </div>
+               <div class="col-md-6">
                   <section class="header-section">
                      <div class="container">
                         <div class="row mb-4">
@@ -73,7 +157,8 @@
                                  <div class="form-group admin-login">
                                     <div class="col-md-8 col-md-offset-4">
                                        <input type="submit"  value="Login" class="btn btn-info btn-login">
-                                       <a href="/"><input type="button" value="Back" class="ml-2 btn btn-warning btn-back"></a>
+                                       <a href="/"><input type="button" value="Back" class="ml-2 btn btn-warning btn-back">
+                                       </a>
                                     </div>
                                  </div>
                               </form>
@@ -82,6 +167,38 @@
                         </div>
                      </div>
                   </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="anim">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                 </div>
                </div>
             </div>
          </div>

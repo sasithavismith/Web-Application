@@ -127,14 +127,14 @@ return view('admin.formBview')->with('details',$grantadmin);
   public function save(Request $request)
   {
     $request->validate([
-  'full_name'=>'required|string',
+  'full_name'=>'required|alpha',
       'designation' => 'required|string',
-      'department' => 'required|string',
-      'faculty'=> 'required|string|',
+      'department' => 'required|alpha',
+      'faculty'=> 'required|alpha|',
       'tel'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:10',
       'email'=> 'required|unique:form_b_s',
       'event'=> 'required',
-      'country'=> 'required|string',
+      'country'=> 'required|alpha',
       'period'=> 'required|numeric',
       'title'=> 'required|string',
       ]);
