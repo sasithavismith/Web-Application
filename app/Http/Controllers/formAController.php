@@ -269,9 +269,7 @@ public function save(Request $request)
     'Amount_received_II'=>'required|string',
     'Year_III'=>'required|string',
     'Country_III'=>'required|string',
-    'Amount_received_III'=>'required|string',
-
-    
+    'Amount_received_III'=>'require',
     ]);
 
 
