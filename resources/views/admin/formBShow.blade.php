@@ -23,10 +23,6 @@
             <table class="table">
               <tbody>
                 <tr>
-                  <th>Id</th>
-                  <td>{{$formBdetails->id}}</td>
-                </tr>
-                <tr>
                   <th>Full Name</th>
                   <td>{{$formBdetails->full_name}}</td>
                 </tr>
@@ -50,6 +46,23 @@
                   <th>Email</th>
                   <td>{{$formBdetails->email}}</td>
                   </tr>
+                  <tr>
+                  <th>Event</th>
+                  <td>{{$formBdetails->event}}</td>
+                </tr>
+                <tr>
+                  <th>Country</th>
+                  <td>{{$formBdetails->country}}</td>
+                </tr>
+                <tr>
+                  <th>Period</th>
+                  <td>{{$formBdetails->period}}</td>
+                </tr>
+                <tr>
+                  <th>Title</th>
+                  <td>{{$formBdetails->title}}</td>
+                </tr>
+               
               </tbody>
             </table>
             <a href="/admin/manuscriptview" class="btn btn-dark">Cancel</a>

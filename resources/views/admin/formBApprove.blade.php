@@ -14,7 +14,7 @@
       <table class="table table-striped table-hover">
           <thead>
               <tr>
-                <th>ID</th>
+              
                 <th>Name</th>
                 <th>Email</th>
                 <th>Actions</th>
@@ -25,11 +25,11 @@
          @foreach($approved as $formBdetails)
 
           <tr class="text-center">
-            <td>{{$formBdetails->id}}</td>
+          
             <td>{{$formBdetails->full_name}}</td>
             <td>{{$formBdetails->email}}</td>
             <td>
-              <a href="/admin/formBShow/{{$formBdetails->id}}" class="btn btn-success text-light"><i class="material-icons icon-checkmark"></i><span>{{ Auth::user()->name }}  Approved</span></a> 
+              <div class="btn btn-success text-light"><i class="material-icons icon-checkmark"></i><span>{{ Auth::user()->name }}  Approved</span></div> 
           </td>
         </tr>
       @endforeach

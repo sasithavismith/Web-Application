@@ -14,7 +14,7 @@
       <table class="table table-striped table-hover">
           <thead>
               <tr>
-                <th>ID</th>
+                
                 <th>Name</th>
                 <th>Email</th>
                 <th>Actions</th>
@@ -24,7 +24,7 @@
         @foreach($details as $formBdetails)
 
           <tr class="text-center">
-            <td>{{$formBdetails->id}}</td>
+           
             <td>{{$formBdetails->full_name}}</td>
             <td>{{$formBdetails->email}}</td>
             <td>
