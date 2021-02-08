@@ -16,6 +16,7 @@ class manuscriptController extends Controller
 
             $manuscriptdetails->name=$request->name;
             $manuscriptdetails->designation=$request->designation;
+            $manuscriptdetails->email=$request->email;
             $manuscriptdetails ->department=$request->department;
             $manuscriptdetails->faculty=$request->faculty;
             $manuscriptdetails->title=$request->title;
@@ -209,6 +210,7 @@ elseif (Auth::user()->id=='1') {
         $request->validate([
         'name' => 'required|string|unique:manuscripts',
         'designation' => 'required|string',
+        'email'=> 'required|unique:manuscripts',
         'department' => 'required|string',
         'faculty'=> 'required|string',
         'title'=> 'required|string',

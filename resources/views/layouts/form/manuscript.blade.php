@@ -51,10 +51,15 @@
                          <input type="text" name="designation" class="form-control" id="designation" value="{{old('designation')}}">
                          <span class="text-danger">{{ $errors->first('designation') }}</span>
                       </div>
+                      <div class="form group">
+                  <label>3. Email:</label>
+                  <input type="email" name="email" class="form-control"  value="{{old('email')}}">
+                  <span class="text-danger">{{ $errors->first('email') }}</span>
+                  </div> 
                       <div class="row">
                          <div class="col-md-6">
                             <div class="form-group">
-                               <label for="department">3. i) Department Attached</label>
+                               <label for="department">4. i) Department Attached</label>
                                <input type="text" name="department" class="form-control" id="department" value="{{old('Department')}}">
                                <span class="text-danger">{{ $errors->first('department') }}</span>
                             </div>
@@ -68,7 +73,7 @@
                          </div>
                       </div>
                       <div class="form-group">
-                         <label for="description">4. Description of the manuscript</label><br>
+                         <label for="description">5. Description of the manuscript</label><br>
                          <label for="title">&nbsp;&nbsp;&nbsp;i) Title of the manuscript</label> 
                          <input type="text" name="title" class="form-control" id="title" value="{{old('title')}}">
                          <span class="text-danger">{{ $errors->first('title') }}</span>
