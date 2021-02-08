@@ -40,7 +40,7 @@ class Research_AllowanceController extends Controller
     {
   
         $request->validate([
-        'name' => 'required|alpha',
+        'name' => 'required|string',
         'designation' => 'required',
         'department' => 'required',
         'faculty'=>'required',
